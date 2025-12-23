@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ALEXANDER one.0 - Final Logo</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      background: #010101;
+      color: #fff;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      min-height: 100vh;
+      padding: 50px;
+    }
+    h1 {
+      text-align: center;
+      font-size: 10px;
+      letter-spacing: 10px;
+      color: #00ff88;
+      margin-bottom: 12px;
+      text-transform: uppercase;
+    }
+    h2 {
+      text-align: center;
+      font-size: 42px;
+      letter-spacing: 20px;
+      color: #fff;
+      margin-bottom: 8px;
+      font-weight: 100;
+    }
+    .tagline {
+      text-align: center;
+      font-size: 10px;
+      letter-spacing: 6px;
+      color: #2a2a2a;
+      margin-bottom: 80px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+      gap: 40px;
+      max-width: 1900px;
+      margin: 0 auto;
+    }
+    .card {
+      background: linear-gradient(175deg, #080808, #020202);
+      border: 1px solid #111;
+      border-radius: 28px;
+      padding: 60px 50px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 550px;
+      transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+      position: relative;
+      overflow: hidden;
+    }
+    .card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, #00ff88, transparent);
+      opacity: 0;
+      transition: opacity 0.6s ease;
+    }
+    .card:hover::before { opacity: 1; }
+    .card:hover {
+      border-color: #00ff8820;
+      transform: translateY(-12px);
+      box-shadow: 0 50px 120px rgba(0, 255, 136, 0.08);
+    }
+    .card.primary {
+      border-color: #00ff8830;
+      box-shadow: 0 0 60px rgba(0, 255, 136, 0.05);
+    }
+    .card.primary:hover {
+      box-shadow: 0 50px 120px rgba(0, 255, 136, 0.12);
+    }
+    .card-label {
+      margin-top: 45px;
+      font-size: 10px;
+      letter-spacing: 6px;
+      color: #222;
+      text-transform: uppercase;
+    }
+    .card.primary .card-label { color: #00ff88; }
+    .card-desc {
+      margin-top: 10px;
+      font-size: 11px;
+      color: #333;
+      text-align: center;
+      max-width: 320px;
+      line-height: 1.8;
+    }
+    svg { max-width: 100%; height: auto; }
+
+    .light-card {
+      background: linear-gradient(175deg, #fafafa, #fff);
+      border-color: #e8e8e8;
+    }
+    .light-card:hover {
+      border-color: #00dd7750;
+      box-shadow: 0 50px 120px rgba(0, 180, 100, 0.12);
+    }
+    .light-card .card-label { color: #888; }
+    .light-card .card-desc { color: #999; }
+
+    .section-title {
+      text-align: center;
+      margin: 100px 0 50px;
+      font-size: 9px;
+      letter-spacing: 8px;
+      color: #1a1a1a;
+      text-transform: uppercase;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Final Selection</h1>
+  <h2>ALEXANDER</h2>
+  <p class="tagline">Version 5 — Layered Depth</p>
+
+  <div class="grid">
+
+    <!-- V5-A: Original refined -->
+    <div class="card primary">
+      <svg width="320" height="340" viewBox="0 0 320 340">
+        <defs>
+          <filter id="glowA">
+            <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+            <feMerge>
+              <feMergeNode in="coloredBlur"/>
+              <feMergeNode in="SourceGraphic"/>
+            </feMerge>
+          </filter>
+          <filter id="shadowA">
+            <feDropShadow dx="0" dy="6" stdDeviation="10" flood-opacity="0.6"/>
+          </filter>
+          <linearGradient id="shieldGradA" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" style="stop-color:#0f0f0f"/>
+            <stop offset="100%" style="stop-color:#080808"/>
+          </linearGradient>
+        </defs>
+
+        <!-- Outer shield layer -->
+        <path d="M160 28
+                 L280 68
+                 L280 160
+                 Q280 235 160 280
+                 Q40 235 40 160
+                 L40 68 Z"
+              fill="none" stroke="#141414" stroke-width="2"/>
+
+        <!-- Spear shaft -->
+        <line x1="160" y1="0" x2="160" y2="265" stroke="#252525" stroke-width="5"/>
+
+        <!-- Spear tip -->
+        <polygon points="160,-8 148,28 160,16 172,28" fill="#00ff88" filter="url(#glowA)"/>
+
+        <!-- Main shield -->
+        <path d="M160 48
+                 L265 82
+                 L265 155
+                 Q265 220 160 260
+                 Q55 220 55 155
+                 L55 82 Z"
+              fill="url(#shieldGradA)" stroke="#00ff88" stroke-width="1.2" filter="url(#shadowA)"/>
+
+        <!-- Inner shield highlight -->
+        <path d="M160 62
+                 L250 92
+                 L250 148
+                 Q250 205 160 242
+                 Q70 205 70 148
+                 L70 92 Z"
+              fill="none" stroke="#00ff88" stroke-width="0.5" opacity="0.15"/>
+
+        <!-- Outer A (shadow) -->
+        <polygon points="160,85 215,210 190,210 160,140 130,210 105,210"
+                 fill="none" stroke="#1a1a1a" stroke-width="2"/>
+
+        <!-- Inner A (glowing) -->
+        <polygon points="160,98 202,202 182,202 160,152 138,202 118,202"
+                 fill="none" stroke="#00ff88" stroke-width="2.5" filter="url(#glowA)"/>
+
+        <!-- Center energy core -->
+        <circle cx="160" cy="155" r="10" fill="none" stroke="#00ff88" stroke-width="1.5" filter="url(#glowA)"/>
+        <circle cx="160" cy="155" r="4" fill="#00ff88" filter="url(#glowA)"/>
+
+        <!-- Energy beams -->
+        <line x1="105" y1="155" x2="145" y2="155" stroke="#00ff88" stroke-width="2" opacity="0.8"/>
+        <line x1="175" y1="155" x2="215" y2="155" stroke="#00ff88" stroke-width="2" opacity="0.8"/>
+
+        <!-- Text -->
+        <text x="160" y="302" text-anchor="middle" fill="#fff"
+              font-family="'SF Mono', Consolas, monospace" font-size="22" letter-spacing="8" font-weight="500">ALEXANDER</text>
+        <text x="160" y="328" text-anchor="middle" fill="#00ff88"
+              font-family="'SF Mono', Consolas, monospace" font-size="14" letter-spacing="4">one.0</text>
+      </svg>
+      <div class="card-label">Primary — Dark</div>
+      <div class="card-desc">Main logo for dark backgrounds</div>
+    </div>
+
+    <!-- V5-B: Higher contrast -->
+    <div class="card">
+      <svg width="320" height="340" viewBox="0 0 320 340">
+        <defs>
+          <filter id="glowB">
+            <feGaussianBlur stdDeviation="5" result="coloredBlur"/>
+            <feMerge>
+              <feMergeNode in="coloredBlur"/>
+              <feMergeNode in="SourceGraphic"/>
+            </feMerge>
+          </filter>
+          <filter id="shadowB">
+            <feDropShadow dx="0" dy="8" stdDeviation="12" flood-opacity="0.7"/>
+          </filter>
+        </defs>
+
+        <!-- Outer shield -->
+        <path d="M160 28
+                 L280 68
+                 L280 160
+                 Q280 235 160 280
+                 Q40 235 40 160
+                 L40 68 Z"
+              fill="none" stroke="#0a0a0a" stroke-width="3"/>
+
+        <!-- Spear -->
+        <line x1="160" y1="0" x2="160" y2="265" stroke="#1a1a1a" stroke-width="6"/>
+        <polygon points="160,-8 146,30 160,16 174,30" fill="#00ff88" filter="url(#glowB)"/>
+
+        <!-- Main shield (brighter border) -->
+        <path d="M160 48
+                 L265 82
+                 L265 155
+                 Q265 220 160 260
+                 Q55 220 55 155
+                 L55 82 Z"
+              fill="#050505" stroke="#00ff88" stroke-width="2" filter="url(#shadowB)"/>
+
+        <!-- A with stronger glow -->
+        <polygon points="160,90 210,208 185,208 160,145 135,208 110,208"
+                 fill="none" stroke="#00ff88" stroke-width="3" filter="url(#glowB)"/>
+
+        <!-- Intense center -->
+        <circle cx="160" cy="152" r="12" fill="none" stroke="#00ff88" stroke-width="2" filter="url(#glowB)"/>
+        <circle cx="160" cy="152" r="5" fill="#00ff88" filter="url(#glowB)"/>
+
+        <!-- Beams -->
+        <line x1="100" y1="152" x2="143" y2="152" stroke="#00ff88" stroke-width="2.5" filter="url(#glowB)"/>
+        <line x1="177" y1="152" x2="220" y2="152" stroke="#00ff88" stroke-width="2.5" filter="url(#glowB)"/>
+
+        <!-- Text -->
+        <text x="160" y="302" text-anchor="middle" fill="#fff"
+              font-family="'SF Mono', Consolas, monospace" font-size="22" letter-spacing="8" font-weight="600">ALEXANDER</text>
+        <text x="160" y="328" text-anchor="middle" fill="#00ff88" filter="url(#glowB)"
+              font-family="'SF Mono', Consolas, monospace" font-size="14" letter-spacing="4">one.0</text>
+      </svg>
+      <div class="card-label">High Contrast</div>
+      <div class="card-desc">Maximum visibility, stronger glow</div>
+    </div>
+
+    <!-- V5-C: Subtle/Premium -->
+    <div class="card">
+      <svg width="320" height="340" viewBox="0 0 320 340">
+        <defs>
+          <filter id="glowC">
+            <feGaussianBlur stdDeviation="2.5" result="coloredBlur"/>
+            <feMerge>
+              <feMergeNode in="coloredBlur"/>
+              <feMergeNode in="SourceGraphic"/>
+            </feMerge>
+          </filter>
+          <filter id="shadowC">
+            <feDropShadow dx="0" dy="4" stdDeviation="6" flood-opacity="0.4"/>
+          </filter>
+        </defs>
+
+        <!-- Outer shield - very subtle -->
+        <path d="M160 28
+                 L280 68
+                 L280 160
+                 Q280 235 160 280
+                 Q40 235 40 160
+                 L40 68 Z"
+              fill="none" stroke="#0d0d0d" stroke-width="1"/>
+
+        <!-- Thin spear -->
+        <line x1="160" y1="5" x2="160" y2="260" stroke="#181818" stroke-width="3"/>
+        <polygon points="160,-2 152,22 160,15 168,22" fill="#00ff88" opacity="0.8"/>
+
+        <!-- Main shield - subtle glow -->
+        <path d="M160 48
+                 L265 82
+                 L265 155
+                 Q265 220 160 260
+                 Q55 220 55 155
+                 L55 82 Z"
+              fill="#070707" stroke="#00ff88" stroke-width="0.8" opacity="0.7" filter="url(#shadowC)"/>
+
+        <!-- Inner border -->
+        <path d="M160 65
+                 L248 95
+                 L248 150
+                 Q248 200 160 235
+                 Q72 200 72 150
+                 L72 95 Z"
+              fill="none" stroke="#00ff88" stroke-width="0.3" opacity="0.3"/>
+
+        <!-- Elegant A -->
+        <polygon points="160,95 205,205 183,205 160,150 137,205 115,205"
+                 fill="none" stroke="#fff" stroke-width="1.5" opacity="0.9"/>
+
+        <!-- Subtle crossbar -->
+        <line x1="125" y1="160" x2="195" y2="160" stroke="#00ff88" stroke-width="1.5" opacity="0.6"/>
+
+        <!-- Minimal center -->
+        <circle cx="160" cy="160" r="6" fill="none" stroke="#00ff88" stroke-width="1" opacity="0.5"/>
+        <circle cx="160" cy="160" r="2" fill="#00ff88" opacity="0.8"/>
+
+        <!-- Text - refined -->
+        <text x="160" y="302" text-anchor="middle" fill="#ccc"
+              font-family="'Helvetica Neue', Arial, sans-serif" font-size="18" letter-spacing="12" font-weight="300">ALEXANDER</text>
+        <text x="160" y="326" text-anchor="middle" fill="#00ff88" opacity="0.7"
+              font-family="'Helvetica Neue', Arial, sans-serif" font-size="12" letter-spacing="5">one.0</text>
+      </svg>
+      <div class="card-label">Subtle Premium</div>
+      <div class="card-desc">Understated elegance, luxury feel</div>
+    </div>
+
+    <!-- V5-D: Light mode -->
+    <div class="card light-card">
+      <svg width="320" height="340" viewBox="0 0 320 340">
+        <defs>
+          <filter id="glowD">
+            <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+            <feMerge>
+              <feMergeNode in="coloredBlur"/>
+              <feMergeNode in="SourceGraphic"/>
+            </feMerge>
+          </filter>
+          <filter id="shadowD">
+            <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#000" flood-opacity="0.1"/>
+          </filter>
+          <linearGradient id="shieldGradD" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" style="stop-color:#f8f8f8"/>
+            <stop offset="100%" style="stop-color:#f0f0f0"/>
+          </linearGradient>
+        </defs>
+
+        <!-- Outer shield -->
+        <path d="M160 28
+                 L280 68
+                 L280 160
+                 Q280 235 160 280
+                 Q40 235 40 160
+                 L40 68 Z"
+              fill="none" stroke="#ddd" stroke-width="2"/>
+
+        <!-- Spear -->
+        <line x1="160" y1="0" x2="160" y2="265" stroke="#ccc" stroke-width="5"/>
+        <polygon points="160,-8 148,28 160,16 172,28" fill="#00aa66"/>
+
+        <!-- Main shield -->
+        <path d="M160 48
+                 L265 82
+                 L265 155
+                 Q265 220 160 260
+                 Q55 220 55 155
+                 L55 82 Z"
+              fill="url(#shieldGradD)" stroke="#00aa66" stroke-width="1.5" filter="url(#shadowD)"/>
+
+        <!-- A layers -->
+        <polygon points="160,85 215,210 190,210 160,140 130,210 105,210"
+                 fill="none" stroke="#e0e0e0" stroke-width="2"/>
+        <polygon points="160,98 202,202 182,202 160,152 138,202 118,202"
+                 fill="none" stroke="#00aa66" stroke-width="2.5"/>
+
+        <!-- Center -->
+        <circle cx="160" cy="155" r="10" fill="none" stroke="#00aa66" stroke-width="1.5"/>
+        <circle cx="160" cy="155" r="4" fill="#00aa66"/>
+
+        <!-- Beams -->
+        <line x1="105" y1="155" x2="145" y2="155" stroke="#00aa66" stroke-width="2"/>
+        <line x1="175" y1="155" x2="215" y2="155" stroke="#00aa66" stroke-width="2"/>
+
+        <!-- Text -->
+        <text x="160" y="302" text-anchor="middle" fill="#1a1a1a"
+              font-family="'SF Mono', Consolas, monospace" font-size="22" letter-spacing="8" font-weight="500">ALEXANDER</text>
+        <text x="160" y="328" text-anchor="middle" fill="#00aa66"
+              font-family="'SF Mono', Consolas, monospace" font-size="14" letter-spacing="4">one.0</text>
+      </svg>
+      <div class="card-label">Light Mode</div>
+      <div class="card-desc">For white/light backgrounds</div>
+    </div>
+
+    <!-- V5-E: Icon only (multiple sizes) -->
+    <div class="card">
+      <div style="display: flex; gap: 50px; align-items: flex-end;">
+        <!-- Large icon -->
+        <svg width="140" height="160" viewBox="0 0 140 160">
+          <defs>
+            <filter id="glowE">
+              <feGaussianBlur stdDeviation="2.5" result="coloredBlur"/>
+              <feMerge>
+                <feMergeNode in="coloredBlur"/>
+                <feMergeNode in="SourceGraphic"/>
+              </feMerge>
+            </filter>
+          </defs>
+          <path d="M70 12 L130 35 L130 85 Q130 125 70 145 Q10 125 10 85 L10 35 Z"
+                fill="none" stroke="#181818" stroke-width="1.5"/>
+          <line x1="70" y1="0" x2="70" y2="138" stroke="#222" stroke-width="4"/>
+          <polygon points="70,-5 62,18 70,10 78,18" fill="#00ff88" filter="url(#glowE)"/>
+          <path d="M70 25 L120 45 L120 82 Q120 115 70 132 Q20 115 20 82 L20 45 Z"
+                fill="#0a0a0a" stroke="#00ff88" stroke-width="1"/>
+          <polygon points="70,48 100,115 85,115 70,78 55,115 40,115"
+                   fill="none" stroke="#00ff88" stroke-width="2" filter="url(#glowE)"/>
+          <circle cx="70" cy="85" r="5" fill="none" stroke="#00ff88" stroke-width="1"/>
+          <circle cx="70" cy="85" r="2" fill="#00ff88"/>
+          <line x1="45" y1="85" x2="62" y2="85" stroke="#00ff88" stroke-width="1.5"/>
+          <line x1="78" y1="85" x2="95" y2="85" stroke="#00ff88" stroke-width="1.5"/>
+        </svg>
+
+        <!-- Medium icon -->
+        <svg width="80" height="95" viewBox="0 0 80 95">
+          <line x1="40" y1="2" x2="40" y2="82" stroke="#222" stroke-width="3"/>
+          <polygon points="40,0 35,12 40,8 45,12" fill="#00ff88"/>
+          <path d="M40 15 L72 28 L72 52 Q72 72 40 82 Q8 72 8 52 L8 28 Z"
+                fill="#0a0a0a" stroke="#00ff88" stroke-width="1"/>
+          <polygon points="40,30 58,70 48,70 40,50 32,70 22,70"
+                   fill="none" stroke="#00ff88" stroke-width="1.5"/>
+          <circle cx="40" cy="52" r="3" fill="#00ff88"/>
+          <line x1="28" y1="52" x2="36" y2="52" stroke="#00ff88" stroke-width="1"/>
+          <line x1="44" y1="52" x2="52" y2="52" stroke="#00ff88" stroke-width="1"/>
+        </svg>
+
+        <!-- Small icon (favicon) -->
+        <svg width="48" height="58" viewBox="0 0 48 58">
+          <line x1="24" y1="2" x2="24" y2="50" stroke="#333" stroke-width="2"/>
+          <polygon points="24,0 21,8 24,5 27,8" fill="#00ff88"/>
+          <path d="M24 10 L44 18 L44 32 Q44 45 24 52 Q4 45 4 32 L4 18 Z"
+                fill="#0a0a0a" stroke="#00ff88" stroke-width="1"/>
+          <polygon points="24,20 36,44 30,44 24,32 18,44 12,44"
+                   fill="none" stroke="#00ff88" stroke-width="1.5"/>
+          <circle cx="24" cy="33" r="2" fill="#00ff88"/>
+        </svg>
+      </div>
+      <div class="card-label">Icon System</div>
+      <div class="card-desc">Scalable marks for all sizes</div>
+    </div>
+
+    <!-- V5-F: Monochrome -->
+    <div class="card">
+      <svg width="320" height="340" viewBox="0 0 320 340">
+        <defs>
+          <filter id="shadowF">
+            <feDropShadow dx="0" dy="4" stdDeviation="6" flood-opacity="0.3"/>
+          </filter>
+        </defs>
+
+        <!-- All white version -->
+        <path d="M160 28 L280 68 L280 160 Q280 235 160 280 Q40 235 40 160 L40 68 Z"
+              fill="none" stroke="#333" stroke-width="1.5"/>
+
+        <line x1="160" y1="0" x2="160" y2="265" stroke="#444" stroke-width="5"/>
+        <polygon points="160,-8 148,28 160,16 172,28" fill="#fff"/>
+
+        <path d="M160 48 L265 82 L265 155 Q265 220 160 260 Q55 220 55 155 L55 82 Z"
+              fill="#0a0a0a" stroke="#fff" stroke-width="1.2" filter="url(#shadowF)"/>
+
+        <polygon points="160,85 215,210 190,210 160,140 130,210 105,210"
+                 fill="none" stroke="#333" stroke-width="1.5"/>
+        <polygon points="160,98 202,202 182,202 160,152 138,202 118,202"
+                 fill="none" stroke="#fff" stroke-width="2"/>
+
+        <circle cx="160" cy="155" r="10" fill="none" stroke="#fff" stroke-width="1.5"/>
+        <circle cx="160" cy="155" r="4" fill="#fff"/>
+
+        <line x1="105" y1="155" x2="145" y2="155" stroke="#fff" stroke-width="2"/>
+        <line x1="175" y1="155" x2="215" y2="155" stroke="#fff" stroke-width="2"/>
+
+        <text x="160" y="302" text-anchor="middle" fill="#fff"
+              font-family="'SF Mono', Consolas, monospace" font-size="22" letter-spacing="8" font-weight="500">ALEXANDER</text>
+        <text x="160" y="328" text-anchor="middle" fill="#888"
+              font-family="'SF Mono', Consolas, monospace" font-size="14" letter-spacing="4">one.0</text>
+      </svg>
+      <div class="card-label">Monochrome</div>
+      <div class="card-desc">Single color for special uses</div>
+    </div>
+
+  </div>
+
+  <p class="section-title">Complete Brand System</p>
+
+  <p style="text-align: center; margin-top: 20px; color: #00ff88; font-size: 8px; letter-spacing: 10px; text-transform: uppercase;">
+    Alexander one.0 — Proactive Protection
+  </p>
+
+</body>
+</html>

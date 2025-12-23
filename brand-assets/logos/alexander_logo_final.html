@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ALEXANDER one.0 - Final Logo Concepts</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      background: #050505;
+      color: #fff;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      min-height: 100vh;
+      padding: 40px;
+    }
+    h1 {
+      text-align: center;
+      font-size: 12px;
+      letter-spacing: 6px;
+      color: #444;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+    }
+    h2 {
+      text-align: center;
+      font-size: 28px;
+      letter-spacing: 12px;
+      color: #fff;
+      margin-bottom: 60px;
+      font-weight: 300;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+      gap: 30px;
+      max-width: 1600px;
+      margin: 0 auto;
+    }
+    .card {
+      background: linear-gradient(160deg, #0d0d0d, #080808);
+      border: 1px solid #1a1a1a;
+      border-radius: 16px;
+      padding: 60px 40px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 400px;
+      transition: all 0.4s ease;
+      position: relative;
+      overflow: hidden;
+    }
+    .card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, #00ff88, transparent);
+      opacity: 0;
+      transition: opacity 0.4s ease;
+    }
+    .card:hover::before { opacity: 1; }
+    .card:hover {
+      border-color: #00ff8833;
+      transform: translateY(-6px);
+      box-shadow: 0 20px 60px rgba(0, 255, 136, 0.1);
+    }
+    .card-label {
+      margin-top: 40px;
+      font-size: 10px;
+      letter-spacing: 4px;
+      color: #333;
+      text-transform: uppercase;
+    }
+    .card.light {
+      background: linear-gradient(160deg, #fafafa, #fff);
+      border-color: #e5e5e5;
+    }
+    .card.light:hover {
+      border-color: #00dd7799;
+      box-shadow: 0 20px 60px rgba(0, 200, 100, 0.15);
+    }
+    .card.light::before {
+      background: linear-gradient(90deg, transparent, #00cc66, transparent);
+    }
+    .card.light .card-label { color: #aaa; }
+    svg { max-width: 100%; height: auto; }
+
+    .section-title {
+      text-align: center;
+      font-size: 11px;
+      letter-spacing: 5px;
+      color: #00ff88;
+      margin: 80px 0 40px;
+      text-transform: uppercase;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Selected Direction</h1>
+  <h2>ALEXANDER one.0</h2>
+
+  <div class="grid">
+
+    <!-- VARIATION 1: Original refined -->
+    <div class="card">
+      <svg width="260" height="240" viewBox="0 0 260 240">
+        <defs>
+          <filter id="glow1">
+            <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+            <feMerge>
+              <feMergeNode in="coloredBlur"/>
+              <feMergeNode in="SourceGraphic"/>
+            </feMerge>
+          </filter>
+        </defs>
+        <!-- Main A structure -->
+        <path d="M130 35 L130 55 L175 145 L175 160 L155 160 L155 152 L130 105 L105 152 L105 160 L85 160 L85 145 L130 55"
+              fill="none" stroke="#fff" stroke-width="2.5" stroke-linejoin="round"/>
+        <!-- Connection nodes -->
+        <circle cx="130" cy="35" r="5" fill="#00ff88" filter="url(#glow1)"/>
+        <circle cx="175" cy="160" r="4" fill="#00ff88" filter="url(#glow1)"/>
+        <circle cx="85" cy="160" r="4" fill="#00ff88" filter="url(#glow1)"/>
+        <!-- Crossbar -->
+        <line x1="98" y1="125" x2="162" y2="125" stroke="#00ff88" stroke-width="2.5" filter="url(#glow1)"/>
+        <!-- Small accent nodes on crossbar -->
+        <circle cx="98" cy="125" r="2.5" fill="#00ff88"/>
+        <circle cx="162" cy="125" r="2.5" fill="#00ff88"/>
+        <!-- Text -->
+        <text x="130" y="195" text-anchor="middle" fill="#fff"
+              font-family="'SF Mono', Consolas, Monaco, monospace" font-size="18" letter-spacing="5" font-weight="500">ALEXANDER</text>
+        <text x="130" y="218" text-anchor="middle" fill="#00ff88"
+              font-family="'SF Mono', Consolas, Monaco, monospace" font-size="13" letter-spacing="2">one.0</text>
+      </svg>
+      <div class="card-label">Version A — Circuit Core</div>
+    </div>
+
+    <!-- VARIATION 2: Cleaner, more minimal -->
+    <div class="card">
+      <svg width="260" height="240" viewBox="0 0 260 240">
+        <defs>
+          <filter id="glow2">
+            <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+            <feMerge>
+              <feMergeNode in="coloredBlur"/>
+              <feMergeNode in="SourceGraphic"/>
+            </feMerge>
+          </filter>
+        </defs>
+        <!-- Simplified geometric A -->
+        <polygon points="130,40 180,150 155,150 130,95 105,150 80,150"
+                 fill="none" stroke="#fff" stroke-width="2"/>
+        <!-- Glowing crossbar -->
+        <rect x="95" y="120" width="70" height="3" fill="#00ff88" filter="url(#glow2)"/>
+        <!-- Top node only -->
+        <circle cx="130" cy="40" r="6" fill="none" stroke="#00ff88" stroke-width="2"/>
+        <circle cx="130" cy="40" r="2" fill="#00ff88" filter="url(#glow2)"/>
+        <!-- Text -->
+        <text x="130" y="190" text-anchor="middle" fill="#fff"
+              font-family="'Helvetica Neue', Arial, sans-serif" font-size="16" letter-spacing="8" font-weight="300">ALEXANDER</text>
+        <line x1="70" y1="200" x2="190" y2="200" stroke="#00ff88" stroke-width="1" opacity="0.5"/>
+        <text x="130" y="222" text-anchor="middle" fill="#00ff88"
+              font-family="'Helvetica Neue', Arial, sans-serif" font-size="12" letter-spacing="3">one.0</text>
+      </svg>
+      <div class="card-label">Version B — Clean Node</div>
+    </div>
+
+    <!-- VARIATION 3: Bold with data streams -->
+    <div class="card">
+      <svg width="260" height="240" viewBox="0 0 260 240">
+        <defs>
+          <linearGradient id="techGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" style="stop-color:#00ff88"/>
+            <stop offset="100%" style="stop-color:#00aa55"/>
+          </linearGradient>
+          <filter id="glow3">
+            <feGaussianBlur stdDeviation="2.5" result="coloredBlur"/>
+            <feMerge>
+              <feMergeNode in="coloredBlur"/>
+              <feMergeNode in="SourceGraphic"/>
+            </feMerge>
+          </filter>
+        </defs>
+        <!-- Data stream lines (left) -->
+        <line x1="40" y1="80" x2="75" y2="80" stroke="#00ff88" stroke-width="1" opacity="0.3"/>
+        <line x1="50" y1="95" x2="80" y2="95" stroke="#00ff88" stroke-width="1" opacity="0.5"/>
+        <line x1="45" y1="110" x2="85" y2="110" stroke="#00ff88" stroke-width="1" opacity="0.4"/>
+        <!-- Data stream lines (right) -->
+        <line x1="185" y1="80" x2="220" y2="80" stroke="#00ff88" stroke-width="1" opacity="0.3"/>
+        <line x1="180" y1="95" x2="210" y2="95" stroke="#00ff88" stroke-width="1" opacity="0.5"/>
+        <line x1="175" y1="110" x2="215" y2="110" stroke="#00ff88" stroke-width="1" opacity="0.4"/>
+        <!-- Bold A -->
+        <polygon points="130,35 185,155 160,155 130,85 100,155 75,155"
+                 fill="#fff"/>
+        <!-- Cutout bar -->
+        <rect x="100" y="115" width="60" height="12" fill="#050505"/>
+        <!-- Accent bar -->
+        <rect x="105" y="118" width="50" height="6" fill="url(#techGrad)" filter="url(#glow3)"/>
+        <!-- Text -->
+        <text x="130" y="190" text-anchor="middle" fill="#fff"
+              font-family="'Arial Black', Impact, sans-serif" font-size="20" letter-spacing="4">ALEXANDER</text>
+        <text x="130" y="215" text-anchor="middle" fill="#00ff88"
+              font-family="Consolas, monospace" font-size="14" font-weight="bold" letter-spacing="2">one.0</text>
+      </svg>
+      <div class="card-label">Version C — Data Flow</div>
+    </div>
+
+    <!-- VARIATION 4: Outline with pulse effect -->
+    <div class="card">
+      <svg width="260" height="240" viewBox="0 0 260 240">
+        <defs>
+          <filter id="glow4">
+            <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+            <feMerge>
+              <feMergeNode in="coloredBlur"/>
+              <feMergeNode in="SourceGraphic"/>
+            </feMerge>
+          </filter>
+        </defs>
+        <!-- Outer A outline -->
+        <polygon points="130,30 190,160 165,160 130,80 95,160 70,160"
+                 fill="none" stroke="#333" stroke-width="1"/>
+        <!-- Inner A (glowing) -->
+        <polygon points="130,50 170,150 150,150 130,100 110,150 90,150"
+                 fill="none" stroke="#00ff88" stroke-width="2" filter="url(#glow4)"/>
+        <!-- Center dot -->
+        <circle cx="130" cy="120" r="4" fill="#00ff88" filter="url(#glow4)"/>
+        <!-- Horizontal lines through center -->
+        <line x1="80" y1="120" x2="115" y2="120" stroke="#00ff88" stroke-width="1" opacity="0.7"/>
+        <line x1="145" y1="120" x2="180" y2="120" stroke="#00ff88" stroke-width="1" opacity="0.7"/>
+        <!-- Text with glow -->
+        <text x="130" y="195" text-anchor="middle" fill="#fff"
+              font-family="'SF Mono', Consolas, monospace" font-size="15" letter-spacing="6">ALEXANDER</text>
+        <text x="130" y="220" text-anchor="middle" fill="#00ff88" filter="url(#glow4)"
+              font-family="'SF Mono', Consolas, monospace" font-size="14" letter-spacing="3">one.0</text>
+      </svg>
+      <div class="card-label">Version D — Pulse</div>
+    </div>
+
+    <!-- VARIATION 5: Icon only (compact) -->
+    <div class="card">
+      <svg width="160" height="200" viewBox="0 0 160 200">
+        <defs>
+          <filter id="glow5">
+            <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+            <feMerge>
+              <feMergeNode in="coloredBlur"/>
+              <feMergeNode in="SourceGraphic"/>
+            </feMerge>
+          </filter>
+        </defs>
+        <!-- Compact A mark -->
+        <path d="M80 25 L80 40 L120 120 L120 135 L100 135 L100 125 L80 85 L60 125 L60 135 L40 135 L40 120 L80 40"
+              fill="none" stroke="#fff" stroke-width="3" stroke-linejoin="round"/>
+        <!-- Nodes -->
+        <circle cx="80" cy="25" r="6" fill="#00ff88" filter="url(#glow5)"/>
+        <circle cx="120" cy="135" r="4" fill="#00ff88" filter="url(#glow5)"/>
+        <circle cx="40" cy="135" r="4" fill="#00ff88" filter="url(#glow5)"/>
+        <!-- Crossbar -->
+        <line x1="55" y1="100" x2="105" y2="100" stroke="#00ff88" stroke-width="3" filter="url(#glow5)"/>
+        <!-- Subtext -->
+        <text x="80" y="170" text-anchor="middle" fill="#444"
+              font-family="Consolas, monospace" font-size="10" letter-spacing="2">ICON MARK</text>
+      </svg>
+      <div class="card-label">Version E — Icon Only</div>
+    </div>
+
+    <!-- VARIATION 6: Light mode version -->
+    <div class="card light">
+      <svg width="260" height="240" viewBox="0 0 260 240">
+        <defs>
+          <filter id="glowLight">
+            <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+            <feMerge>
+              <feMergeNode in="coloredBlur"/>
+              <feMergeNode in="SourceGraphic"/>
+            </feMerge>
+          </filter>
+        </defs>
+        <!-- Main A structure -->
+        <path d="M130 35 L130 55 L175 145 L175 160 L155 160 L155 152 L130 105 L105 152 L105 160 L85 160 L85 145 L130 55"
+              fill="none" stroke="#1a1a1a" stroke-width="2.5" stroke-linejoin="round"/>
+        <!-- Connection nodes (darker green for light bg) -->
+        <circle cx="130" cy="35" r="5" fill="#00aa66" filter="url(#glowLight)"/>
+        <circle cx="175" cy="160" r="4" fill="#00aa66"/>
+        <circle cx="85" cy="160" r="4" fill="#00aa66"/>
+        <!-- Crossbar -->
+        <line x1="98" y1="125" x2="162" y2="125" stroke="#00aa66" stroke-width="2.5"/>
+        <circle cx="98" cy="125" r="2.5" fill="#00aa66"/>
+        <circle cx="162" cy="125" r="2.5" fill="#00aa66"/>
+        <!-- Text -->
+        <text x="130" y="195" text-anchor="middle" fill="#1a1a1a"
+              font-family="'SF Mono', Consolas, Monaco, monospace" font-size="18" letter-spacing="5" font-weight="500">ALEXANDER</text>
+        <text x="130" y="218" text-anchor="middle" fill="#00aa66"
+              font-family="'SF Mono', Consolas, Monaco, monospace" font-size="13" letter-spacing="2">one.0</text>
+      </svg>
+      <div class="card-label">Version F — Light Mode</div>
+    </div>
+
+  </div>
+
+  <p class="section-title">Hover over cards to see glow effect</p>
+
+  <p style="text-align: center; margin-top: 40px; color: #222; font-size: 11px; letter-spacing: 2px;">
+    ALEXANDER one.0 &bull; Logo System
+  </p>
+
+</body>
+</html>

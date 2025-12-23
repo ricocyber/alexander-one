@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ALEXANDER one.0 - Warrior Concepts</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      background: #030303;
+      color: #fff;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      min-height: 100vh;
+      padding: 40px;
+    }
+    h1 {
+      text-align: center;
+      font-size: 11px;
+      letter-spacing: 8px;
+      color: #00ff88;
+      margin-bottom: 15px;
+      text-transform: uppercase;
+    }
+    h2 {
+      text-align: center;
+      font-size: 32px;
+      letter-spacing: 14px;
+      color: #fff;
+      margin-bottom: 10px;
+      font-weight: 300;
+    }
+    .tagline {
+      text-align: center;
+      font-size: 11px;
+      letter-spacing: 4px;
+      color: #333;
+      margin-bottom: 60px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+      gap: 30px;
+      max-width: 1700px;
+      margin: 0 auto;
+    }
+    .card {
+      background: linear-gradient(165deg, #0a0a0a, #050505);
+      border: 1px solid #151515;
+      border-radius: 20px;
+      padding: 50px 40px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 450px;
+      transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+      position: relative;
+      overflow: hidden;
+    }
+    .card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, #00ff88, transparent);
+      opacity: 0;
+      transition: opacity 0.5s ease;
+    }
+    .card:hover::before { opacity: 1; }
+    .card:hover {
+      border-color: #00ff8822;
+      transform: translateY(-8px) scale(1.01);
+      box-shadow: 0 30px 80px rgba(0, 255, 136, 0.12);
+    }
+    .card-label {
+      margin-top: 35px;
+      font-size: 10px;
+      letter-spacing: 5px;
+      color: #2a2a2a;
+      text-transform: uppercase;
+    }
+    .card-desc {
+      margin-top: 10px;
+      font-size: 11px;
+      color: #444;
+      text-align: center;
+      max-width: 280px;
+      line-height: 1.6;
+    }
+    svg { max-width: 100%; height: auto; }
+  </style>
+</head>
+<body>
+
+  <h1>Proactive Protection</h1>
+  <h2>ALEXANDER</h2>
+  <p class="tagline">CONQUER. PROTECT. INNOVATE.</p>
+
+  <div class="grid">
+
+    <!-- CONCEPT 1: Spartan Helmet A -->
+    <div class="card">
+      <svg width="280" height="280" viewBox="0 0 280 280">
+        <defs>
+          <filter id="glow1">
+            <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+            <feMerge>
+              <feMergeNode in="coloredBlur"/>
+              <feMergeNode in="SourceGraphic"/>
+            </feMerge>
+          </filter>
+          <linearGradient id="helmetGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" style="stop-color:#444"/>
+            <stop offset="50%" style="stop-color:#222"/>
+            <stop offset="100%" style="stop-color:#111"/>
+          </linearGradient>
+        </defs>
+
+        <!-- Helmet outer shape -->
+        <path d="M140 30
+                 C200 30 230 80 230 130
+                 L230 180
+                 C230 200 220 210 200 215
+                 L200 195
+                 C200 185 195 180 185 180
+                 L175 180 L175 200 L165 200 L165 180
+                 L115 180 L115 200 L105 200 L105 180
+                 L95 180
+                 C85 180 80 185 80 195
+                 L80 215
+                 C60 210 50 200 50 180
+                 L50 130
+                 C50 80 80 30 140 30Z"
+              fill="url(#helmetGrad)" stroke="#333" stroke-width="1"/>
+
+        <!-- Helmet crest (mohawk) -->
+        <path d="M140 15 C140 15 145 30 140 30 C135 30 140 15 140 15"
+              fill="#00ff88" filter="url(#glow1)"/>
+        <path d="M140 20 L140 5" stroke="#00ff88" stroke-width="3" stroke-linecap="round" filter="url(#glow1)"/>
+
+        <!-- Eye slit / visor - forms the A crossbar -->
+        <rect x="70" y="120" width="140" height="8" fill="#00ff88" filter="url(#glow1)" rx="2"/>
+
+        <!-- A shape integrated in helmet (nose guard forms center) -->
+        <path d="M140 65 L140 180" stroke="#111" stroke-width="20"/>
+        <path d="M140 65 L140 180" stroke="#1a1a1a" stroke-width="16"/>
+
+        <!-- Tech nodes -->
+        <circle cx="70" cy="124" r="4" fill="#00ff88" filter="url(#glow1)"/>
+        <circle cx="210" cy="124" r="4" fill="#00ff88" filter="url(#glow1)"/>
+        <circle cx="140" cy="5" r="5" fill="#00ff88" filter="url(#glow1)"/>
+
+        <!-- Text -->
+        <text x="140" y="235" text-anchor="middle" fill="#fff"
+              font-family="'SF Mono', Consolas, monospace" font-size="18" letter-spacing="6" font-weight="500">ALEXANDER</text>
+        <text x="140" y="258" text-anchor="middle" fill="#00ff88"
+              font-family="'SF Mono', Consolas, monospace" font-size="12" letter-spacing="2">one.0</text>
+      </svg>
+      <div class="card-label">Spartan Helm</div>
+      <div class="card-desc">Classic warrior helmet with tech-integrated visor</div>
+    </div>
+
+    <!-- CONCEPT 2: Shield + A emblem -->
+    <div class="card">
+      <svg width="280" height="300" viewBox="0 0 280 300">
+        <defs>
+          <filter id="glow2">
+            <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+            <feMerge>
+              <feMergeNode in="coloredBlur"/>
+              <feMergeNode in="SourceGraphic"/>
+            </feMerge>
+          </filter>
+          <linearGradient id="shieldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#1a1a1a"/>
+            <stop offset="50%" style="stop-color:#0d0d0d"/>
+            <stop offset="100%" style="stop-color:#1a1a1a"/>
+          </linearGradient>
+        </defs>
+
+        <!-- Shield shape -->
+        <path d="M140 20
+                 L240 50
+                 L240 140
+                 Q240 200 140 240
+                 Q40 200 40 140
+                 L40 50 Z"
+              fill="url(#shieldGrad)" stroke="#333" stroke-width="2"/>
+
+        <!-- Inner shield border -->
+        <path d="M140 35
+                 L225 60
+                 L225 135
+                 Q225 185 140 220
+                 Q55 185 55 135
+                 L55 60 Z"
+              fill="none" stroke="#00ff88" stroke-width="1" opacity="0.3"/>
+
+        <!-- A with pulse effect -->
+        <!-- Outer A (dim) -->
+        <polygon points="140,55 195,175 170,175 140,105 110,175 85,175"
+                 fill="none" stroke="#333" stroke-width="1"/>
+        <!-- Inner A (glowing) -->
+        <polygon points="140,70 180,165 158,165 140,120 122,165 100,165"
+                 fill="none" stroke="#00ff88" stroke-width="2" filter="url(#glow2)"/>
+
+        <!-- Center power node -->
+        <circle cx="140" cy="135" r="5" fill="#00ff88" filter="url(#glow2)"/>
+        <!-- Horizontal energy lines -->
+        <line x1="95" y1="135" x2="125" y2="135" stroke="#00ff88" stroke-width="1.5" opacity="0.8"/>
+        <line x1="155" y1="135" x2="185" y2="135" stroke="#00ff88" stroke-width="1.5" opacity="0.8"/>
+
+        <!-- Corner nodes -->
+        <circle cx="140" cy="70" r="3" fill="#00ff88" filter="url(#glow2)"/>
+
+        <!-- Text -->
+        <text x="140" y="268" text-anchor="middle" fill="#fff"
+              font-family="'SF Mono', Consolas, monospace" font-size="18" letter-spacing="6" font-weight="500">ALEXANDER</text>
+        <text x="140" y="290" text-anchor="middle" fill="#00ff88"
+              font-family="'SF Mono', Consolas, monospace" font-size="12" letter-spacing="2">one.0</text>
+      </svg>
+      <div class="card-label">Shield Emblem</div>
+      <div class="card-desc">Protection-first design with pulse core</div>
+    </div>
+
+    <!-- CONCEPT 3: Minimal helmet profile -->
+    <div class="card">
+      <svg width="280" height="280" viewBox="0 0 280 280">
+        <defs>
+          <filter id="glow3">
+            <feGaussianBlur stdDeviation="2.5" result="coloredBlur"/>
+            <feMerge>
+              <feMergeNode in="coloredBlur"/>
+              <feMergeNode in="SourceGraphic"/>
+            </feMerge>
+          </filter>
+        </defs>
+
+        <!-- Minimalist helmet outline (side profile) -->
+        <path d="M90 160
+                 L90 100
+                 Q90 50 140 40
+                 Q190 50 190 100
+                 L190 160
+                 L170 160
+                 L170 120
+                 L110 120
+                 L110 160
+                 Z"
+              fill="none" stroke="#fff" stroke-width="2"/>
+
+        <!-- Crest -->
+        <path d="M140 40 L140 15" stroke="#00ff88" stroke-width="4" stroke-linecap="round" filter="url(#glow3)"/>
+        <circle cx="140" cy="12" r="5" fill="#00ff88" filter="url(#glow3)"/>
+
+        <!-- Visor line (A crossbar) -->
+        <line x1="95" y1="120" x2="185" y2="120" stroke="#00ff88" stroke-width="3" filter="url(#glow3)"/>
+
+        <!-- A integrated subtly -->
+        <path d="M140 55 L165 110 M140 55 L115 110"
+              fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" opacity="0.5"/>
+
+        <!-- Chin guard nodes -->
+        <circle cx="90" cy="160" r="3" fill="#00ff88"/>
+        <circle cx="190" cy="160" r="3" fill="#00ff88"/>
+
+        <!-- Text -->
+        <text x="140" y="200" text-anchor="middle" fill="#fff"
+              font-family="'SF Mono', Consolas, monospace" font-size="20" letter-spacing="6" font-weight="500">ALEXANDER</text>
+        <text x="140" y="225" text-anchor="middle" fill="#00ff88"
+              font-family="'SF Mono', Consolas, monospace" font-size="13" letter-spacing="2">one.0</text>
+      </svg>
+      <div class="card-label">Helm Minimal</div>
+      <div class="card-desc">Clean silhouette, maximum recognition</div>
+    </div>
+
+    <!-- CONCEPT 4: Macedonian Star Shield -->
+    <div class="card">
+      <svg width="280" height="300" viewBox="0 0 280 300">
+        <defs>
+          <filter id="glow4">
+            <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+            <feMerge>
+              <feMergeNode in="coloredBlur"/>
+              <feMergeNode in="SourceGraphic"/>
+            </feMerge>
+          </filter>
+        </defs>
+
+        <!-- Circular shield base -->
+        <circle cx="140" cy="130" r="100" fill="none" stroke="#222" stroke-width="3"/>
+        <circle cx="140" cy="130" r="90" fill="none" stroke="#1a1a1a" stroke-width="1"/>
+
+        <!-- Vergina Sun / Macedonian star rays (16 points) -->
+        <g stroke="#00ff88" stroke-width="1" opacity="0.4">
+          <line x1="140" y1="40" x2="140" y2="60"/>
+          <line x1="140" y1="200" x2="140" y2="220"/>
+          <line x1="50" y1="130" x2="70" y2="130"/>
+          <line x1="210" y1="130" x2="230" y2="130"/>
+          <line x1="76" y1="66" x2="90" y2="80"/>
+          <line x1="190" y1="180" x2="204" y2="194"/>
+          <line x1="204" y1="66" x2="190" y2="80"/>
+          <line x1="90" y1="180" x2="76" y2="194"/>
+        </g>
+
+        <!-- Inner circle -->
+        <circle cx="140" cy="130" r="60" fill="none" stroke="#00ff88" stroke-width="1" filter="url(#glow4)" opacity="0.5"/>
+
+        <!-- A in center with pulse -->
+        <polygon points="140,70 175,175 155,175 140,130 125,175 105,175"
+                 fill="none" stroke="#fff" stroke-width="2"/>
+
+        <!-- Core power node -->
+        <circle cx="140" cy="115" r="6" fill="#00ff88" filter="url(#glow4)"/>
+        <!-- Energy ring -->
+        <circle cx="140" cy="115" r="12" fill="none" stroke="#00ff88" stroke-width="1" opacity="0.5"/>
+
+        <!-- Text -->
+        <text x="140" y="260" text-anchor="middle" fill="#fff"
+              font-family="'SF Mono', Consolas, monospace" font-size="18" letter-spacing="6" font-weight="500">ALEXANDER</text>
+        <text x="140" y="283" text-anchor="middle" fill="#00ff88"
+              font-family="'SF Mono', Consolas, monospace" font-size="12" letter-spacing="2">one.0</text>
+      </svg>
+      <div class="card-label">Macedonian Sun</div>
+      <div class="card-desc">Vergina star - symbol of Alexander's dynasty</div>
+    </div>
+
+    <!-- CONCEPT 5: Spear + Shield Combo -->
+    <div class="card">
+      <svg width="300" height="300" viewBox="0 0 300 300">
+        <defs>
+          <filter id="glow5">
+            <feGaussianBlur stdDeviation="2.5" result="coloredBlur"/>
+            <feMerge>
+              <feMergeNode in="coloredBlur"/>
+              <feMergeNode in="SourceGraphic"/>
+            </feMerge>
+          </filter>
+          <linearGradient id="spearGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" style="stop-color:#00ff88"/>
+            <stop offset="100%" style="stop-color:#00aa55"/>
+          </linearGradient>
+        </defs>
+
+        <!-- Spear (vertical, forms the center of A) -->
+        <line x1="150" y1="15" x2="150" y2="200" stroke="#444" stroke-width="4"/>
+        <polygon points="150,5 142,30 150,25 158,30" fill="url(#spearGrad)" filter="url(#glow5)"/>
+
+        <!-- Shield behind -->
+        <path d="M150 60
+                 L220 85
+                 L220 150
+                 Q220 195 150 220
+                 Q80 195 80 150
+                 L80 85 Z"
+              fill="#0a0a0a" stroke="#333" stroke-width="2"/>
+
+        <!-- A formed by shield edges and spear -->
+        <path d="M95 190 L150 75 L205 190" fill="none" stroke="#fff" stroke-width="2"/>
+
+        <!-- Crossbar -->
+        <line x1="110" y1="150" x2="190" y2="150" stroke="#00ff88" stroke-width="2.5" filter="url(#glow5)"/>
+        <circle cx="110" cy="150" r="3" fill="#00ff88"/>
+        <circle cx="190" cy="150" r="3" fill="#00ff88"/>
+
+        <!-- Spear tip glow -->
+        <circle cx="150" cy="12" r="4" fill="#00ff88" filter="url(#glow5)"/>
+
+        <!-- Text -->
+        <text x="150" y="255" text-anchor="middle" fill="#fff"
+              font-family="'SF Mono', Consolas, monospace" font-size="18" letter-spacing="6" font-weight="500">ALEXANDER</text>
+        <text x="150" y="278" text-anchor="middle" fill="#00ff88"
+              font-family="'SF Mono', Consolas, monospace" font-size="12" letter-spacing="2">one.0</text>
+      </svg>
+      <div class="card-label">Spear & Shield</div>
+      <div class="card-desc">Offensive + defensive - complete protection</div>
+    </div>
+
+    <!-- CONCEPT 6: Modern Helmet Front View -->
+    <div class="card">
+      <svg width="280" height="300" viewBox="0 0 280 300">
+        <defs>
+          <filter id="glow6">
+            <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+            <feMerge>
+              <feMergeNode in="coloredBlur"/>
+              <feMergeNode in="SourceGraphic"/>
+            </feMerge>
+          </filter>
+          <linearGradient id="helmGrad2" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" style="stop-color:#2a2a2a"/>
+            <stop offset="100%" style="stop-color:#0a0a0a"/>
+          </linearGradient>
+        </defs>
+
+        <!-- Helmet base (front view) -->
+        <path d="M140 25
+                 C200 25 225 70 225 120
+                 L225 160
+                 C225 190 210 210 180 215
+                 L180 190
+                 L175 190
+                 L175 220
+                 L105 220
+                 L105 190
+                 L100 190
+                 L100 215
+                 C70 210 55 190 55 160
+                 L55 120
+                 C55 70 80 25 140 25Z"
+              fill="url(#helmGrad2)" stroke="#333" stroke-width="1.5"/>
+
+        <!-- Crest -->
+        <rect x="130" y="5" width="20" height="25" fill="#00ff88" filter="url(#glow6)" rx="2"/>
+        <rect x="133" y="3" width="14" height="30" fill="#00cc66"/>
+
+        <!-- T-shaped visor opening (forms A) -->
+        <path d="M140 70 L100 180 M140 70 L180 180"
+              stroke="#00ff88" stroke-width="3" filter="url(#glow6)" stroke-linecap="round"/>
+
+        <!-- Visor crossbar -->
+        <line x1="80" y1="130" x2="200" y2="130" stroke="#00ff88" stroke-width="4" filter="url(#glow6)"/>
+
+        <!-- Eye holes -->
+        <ellipse cx="110" cy="105" rx="20" ry="12" fill="#050505" stroke="#222" stroke-width="1"/>
+        <ellipse cx="170" cy="105" rx="20" ry="12" fill="#050505" stroke="#222" stroke-width="1"/>
+
+        <!-- Eye glows -->
+        <ellipse cx="110" cy="105" rx="8" ry="5" fill="#00ff88" filter="url(#glow6)" opacity="0.7"/>
+        <ellipse cx="170" cy="105" rx="8" ry="5" fill="#00ff88" filter="url(#glow6)" opacity="0.7"/>
+
+        <!-- Cheek nodes -->
+        <circle cx="70" cy="160" r="3" fill="#00ff88"/>
+        <circle cx="210" cy="160" r="3" fill="#00ff88"/>
+
+        <!-- Text -->
+        <text x="140" y="255" text-anchor="middle" fill="#fff"
+              font-family="'SF Mono', Consolas, monospace" font-size="18" letter-spacing="6" font-weight="500">ALEXANDER</text>
+        <text x="140" y="278" text-anchor="middle" fill="#00ff88"
+              font-family="'SF Mono', Consolas, monospace" font-size="12" letter-spacing="2">one.0</text>
+      </svg>
+      <div class="card-label">Guardian Helm</div>
+      <div class="card-desc">Front-facing warrior - ready for battle</div>
+    </div>
+
+  </div>
+
+  <p style="text-align: center; margin-top: 60px; color: #00ff88; font-size: 10px; letter-spacing: 6px; text-transform: uppercase;">
+    Protect What Matters
+  </p>
+
+</body>
+</html>

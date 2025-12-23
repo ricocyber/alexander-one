@@ -1,0 +1,6 @@
+Property ID,Address,City,State,ZIP,Owner,Property Type,Beds,Baths,Sq Ft,Year Built,Purchase Date,Purchase Price,Current Value,Mortgage Balance,Equity,Monthly Rent,Monthly Mortgage,Monthly Taxes,Monthly Insurance,Monthly HOA,Monthly Cash Flow,Cap Rate,Status,Notes
+1,4801 N Blackwelder Ave,Oklahoma City,OK,73118,Eric DeLoera,Single Family,2,1,930,1925,,0,150000,0,150000,0,0,125,80,0,-205,0%,Owner Occupied,Debt-free - potential rental $1200/mo
+2,2705 NW 64th St,Oklahoma City,OK,73116,DeLoera Family (Mom),Single Family,,,,,0,200000,0,200000,0,0,165,100,0,-265,0%,Owner Occupied,Debt-free - verify sq ft and bed/bath
+3,TBD - Target 1,Oklahoma City,OK,,Available,Single Family,3,2,1200,,,,150000,120000,30000,1400,850,150,100,0,300,2.4%,Target,BRRRR candidate - research Del City area
+4,TBD - Target 2,Oklahoma City,OK,,Available,Single Family,3,1,1100,,,,130000,104000,26000,1250,750,130,90,0,280,2.6%,Target,Research Midwest City area
+5,TBD - Target 3,Oklahoma City,OK,,Available,Duplex,4,2,1800,,,,220000,176000,44000,2200,1200,220,150,0,630,3.4%,Target,Small multifamily - higher cash flow

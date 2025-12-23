@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ALEXANDER one.0 - Combined Concept</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      background: #020202;
+      color: #fff;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      min-height: 100vh;
+      padding: 40px;
+    }
+    h1 {
+      text-align: center;
+      font-size: 11px;
+      letter-spacing: 8px;
+      color: #00ff88;
+      margin-bottom: 15px;
+      text-transform: uppercase;
+    }
+    h2 {
+      text-align: center;
+      font-size: 36px;
+      letter-spacing: 16px;
+      color: #fff;
+      margin-bottom: 10px;
+      font-weight: 200;
+    }
+    .tagline {
+      text-align: center;
+      font-size: 10px;
+      letter-spacing: 5px;
+      color: #333;
+      margin-bottom: 70px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+      gap: 35px;
+      max-width: 1800px;
+      margin: 0 auto;
+    }
+    .card {
+      background: linear-gradient(170deg, #0a0a0a, #030303);
+      border: 1px solid #141414;
+      border-radius: 24px;
+      padding: 55px 45px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 500px;
+      transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+      position: relative;
+      overflow: hidden;
+    }
+    .card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, #00ff88, transparent);
+      opacity: 0;
+      transition: opacity 0.5s ease;
+    }
+    .card:hover::before { opacity: 1; }
+    .card:hover {
+      border-color: #00ff8825;
+      transform: translateY(-10px);
+      box-shadow: 0 40px 100px rgba(0, 255, 136, 0.1);
+    }
+    .card-label {
+      margin-top: 40px;
+      font-size: 11px;
+      letter-spacing: 6px;
+      color: #252525;
+      text-transform: uppercase;
+    }
+    .card-desc {
+      margin-top: 12px;
+      font-size: 11px;
+      color: #3a3a3a;
+      text-align: center;
+      max-width: 300px;
+      line-height: 1.7;
+    }
+    .featured {
+      border-color: #00ff8830;
+      background: linear-gradient(170deg, #0c0c0c, #040404);
+    }
+    .featured .card-label { color: #00ff88; }
+    svg { max-width: 100%; height: auto; }
+
+    .section-divider {
+      text-align: center;
+      margin: 80px 0 50px;
+      font-size: 10px;
+      letter-spacing: 6px;
+      color: #222;
+      text-transform: uppercase;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Shield + Spear</h1>
+  <h2>ALEXANDER</h2>
+  <p class="tagline">Proactive Protection Platform</p>
+
+  <div class="grid">
+
+    <!-- COMBINED 1: Classic merge -->
+    <div class="card">
+      <svg width="300" height="320" viewBox="0 0 300 320">
+        <defs>
+          <filter id="glow1">
+            <feGaussianBlur stdDeviation="3.5" result="coloredBlur"/>
+            <feMerge>
+              <feMergeNode in="coloredBlur"/>
+              <feMergeNode in="SourceGraphic"/>
+            </feMerge>
+          </filter>
+          <linearGradient id="shieldGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#181818"/>
+            <stop offset="50%" style="stop-color:#0a0a0a"/>
+            <stop offset="100%" style="stop-color:#181818"/>
+          </linearGradient>
+          <linearGradient id="spearGrad1" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" style="stop-color:#00ff88"/>
+            <stop offset="100%" style="stop-color:#00aa55"/>
+          </linearGradient>
+        </defs>
+
+        <!-- Spear shaft (behind shield) -->
+        <line x1="150" y1="8" x2="150" y2="230" stroke="#2a2a2a" stroke-width="5"/>
+
+        <!-- Spear tip -->
+        <polygon points="150,0 140,28 150,22 160,28" fill="url(#spearGrad1)" filter="url(#glow1)"/>
+        <circle cx="150" cy="5" r="4" fill="#00ff88" filter="url(#glow1)"/>
+
+        <!-- Main shield -->
+        <path d="M150 35
+                 L255 70
+                 L255 145
+                 Q255 210 150 250
+                 Q45 210 45 145
+                 L45 70 Z"
+              fill="url(#shieldGrad1)" stroke="#2a2a2a" stroke-width="2"/>
+
+        <!-- Inner shield glow border -->
+        <path d="M150 50
+                 L240 80
+                 L240 140
+                 Q240 195 150 230
+                 Q60 195 60 140
+                 L60 80 Z"
+              fill="none" stroke="#00ff88" stroke-width="1" opacity="0.25"/>
+
+        <!-- Outer A (dim) -->
+        <polygon points="150,75 210,195 185,195 150,120 115,195 90,195"
+                 fill="none" stroke="#2a2a2a" stroke-width="1.5"/>
+
+        <!-- Inner A (glowing) -->
+        <polygon points="150,90 195,185 173,185 150,135 127,185 105,185"
+                 fill="none" stroke="#00ff88" stroke-width="2" filter="url(#glow1)"/>
+
+        <!-- Center pulse node -->
+        <circle cx="150" cy="150" r="6" fill="#00ff88" filter="url(#glow1)"/>
+        <circle cx="150" cy="150" r="12" fill="none" stroke="#00ff88" stroke-width="1" opacity="0.4"/>
+
+        <!-- Crossbar energy lines -->
+        <line x1="100" y1="150" x2="138" y2="150" stroke="#00ff88" stroke-width="2" opacity="0.8"/>
+        <line x1="162" y1="150" x2="200" y2="150" stroke="#00ff88" stroke-width="2" opacity="0.8"/>
+
+        <!-- Spear bottom (visible below shield) -->
+        <line x1="150" y1="250" x2="150" y2="235" stroke="#2a2a2a" stroke-width="4"/>
+        <circle cx="150" cy="235" r="3" fill="#00ff88" opacity="0.6"/>
+
+        <!-- Text -->
+        <text x="150" y="280" text-anchor="middle" fill="#fff"
+              font-family="'SF Mono', Consolas, monospace" font-size="20" letter-spacing="7" font-weight="500">ALEXANDER</text>
+        <text x="150" y="305" text-anchor="middle" fill="#00ff88"
+              font-family="'SF Mono', Consolas, monospace" font-size="13" letter-spacing="3">one.0</text>
+      </svg>
+      <div class="card-label">Version 1</div>
+      <div class="card-desc">Spear pierces through - ready to strike</div>
+    </div>
+
+    <!-- COMBINED 2: Spear behind, more prominent -->
+    <div class="card featured">
+      <svg width="300" height="320" viewBox="0 0 300 320">
+        <defs>
+          <filter id="glow2">
+            <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+            <feMerge>
+              <feMergeNode in="coloredBlur"/>
+              <feMergeNode in="SourceGraphic"/>
+            </feMerge>
+          </filter>
+          <linearGradient id="shieldGrad2" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" style="stop-color:#151515"/>
+            <stop offset="100%" style="stop-color:#080808"/>
+          </linearGradient>
+        </defs>
+
+        <!-- Spear (centered, forms spine of A) -->
+        <line x1="150" y1="5" x2="150" y2="240" stroke="#333" stroke-width="6"/>
+        <line x1="150" y1="5" x2="150" y2="240" stroke="#222" stroke-width="4"/>
+
+        <!-- Spear tip (glowing) -->
+        <polygon points="150,-5 138,30 150,20 162,30" fill="#00ff88" filter="url(#glow2)"/>
+
+        <!-- Shield -->
+        <path d="M150 40
+                 L250 72
+                 L250 150
+                 Q250 215 150 255
+                 Q50 215 50 150
+                 L50 72 Z"
+              fill="url(#shieldGrad2)" stroke="#00ff88" stroke-width="1.5" opacity="0.9"/>
+
+        <!-- Shield inner highlight -->
+        <path d="M150 55
+                 L235 82
+                 L235 145
+                 Q235 200 150 235
+                 Q65 200 65 145
+                 L65 82 Z"
+              fill="none" stroke="#00ff88" stroke-width="0.5" opacity="0.2"/>
+
+        <!-- A legs extending from spear -->
+        <line x1="150" y1="70" x2="95" y2="200" stroke="#fff" stroke-width="2.5"/>
+        <line x1="150" y1="70" x2="205" y2="200" stroke="#fff" stroke-width="2.5"/>
+
+        <!-- Crossbar -->
+        <line x1="108" y1="155" x2="192" y2="155" stroke="#00ff88" stroke-width="3" filter="url(#glow2)"/>
+
+        <!-- Node points -->
+        <circle cx="150" cy="70" r="5" fill="#00ff88" filter="url(#glow2)"/>
+        <circle cx="95" cy="200" r="4" fill="#00ff88" filter="url(#glow2)"/>
+        <circle cx="205" cy="200" r="4" fill="#00ff88" filter="url(#glow2)"/>
+        <circle cx="108" cy="155" r="3" fill="#00ff88"/>
+        <circle cx="192" cy="155" r="3" fill="#00ff88"/>
+
+        <!-- Spear bottom node -->
+        <circle cx="150" cy="240" r="4" fill="#00ff88" opacity="0.7"/>
+
+        <!-- Text -->
+        <text x="150" y="280" text-anchor="middle" fill="#fff"
+              font-family="'SF Mono', Consolas, monospace" font-size="20" letter-spacing="7" font-weight="500">ALEXANDER</text>
+        <text x="150" y="305" text-anchor="middle" fill="#00ff88"
+              font-family="'SF Mono', Consolas, monospace" font-size="13" letter-spacing="3">one.0</text>
+      </svg>
+      <div class="card-label">Version 2 - Featured</div>
+      <div class="card-desc">Spear as backbone - offense built into defense</div>
+    </div>
+
+    <!-- COMBINED 3: Minimal elegant -->
+    <div class="card">
+      <svg width="300" height="320" viewBox="0 0 300 320">
+        <defs>
+          <filter id="glow3">
+            <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+            <feMerge>
+              <feMergeNode in="coloredBlur"/>
+              <feMergeNode in="SourceGraphic"/>
+            </feMerge>
+          </filter>
+        </defs>
+
+        <!-- Simple spear line -->
+        <line x1="150" y1="10" x2="150" y2="225" stroke="#1a1a1a" stroke-width="3"/>
+
+        <!-- Spear tip minimal -->
+        <polygon points="150,5 144,22 150,18 156,22" fill="#00ff88" filter="url(#glow3)"/>
+
+        <!-- Shield outline only -->
+        <path d="M150 40
+                 L240 70
+                 L240 140
+                 Q240 200 150 235
+                 Q60 200 60 140
+                 L60 70 Z"
+              fill="none" stroke="#fff" stroke-width="1.5"/>
+
+        <!-- A shape -->
+        <path d="M150 65 L100 195 M150 65 L200 195 M115 160 L185 160"
+              fill="none" stroke="#00ff88" stroke-width="2" stroke-linecap="round" filter="url(#glow3)"/>
+
+        <!-- Single center node -->
+        <circle cx="150" cy="65" r="5" fill="#00ff88" filter="url(#glow3)"/>
+
+        <!-- Text -->
+        <text x="150" y="272" text-anchor="middle" fill="#fff"
+              font-family="'Helvetica Neue', Arial, sans-serif" font-size="18" letter-spacing="10" font-weight="300">ALEXANDER</text>
+        <text x="150" y="298" text-anchor="middle" fill="#00ff88"
+              font-family="'Helvetica Neue', Arial, sans-serif" font-size="12" letter-spacing="4">one.0</text>
+      </svg>
+      <div class="card-label">Version 3</div>
+      <div class="card-desc">Clean lines - maximum versatility</div>
+    </div>
+
+    <!-- COMBINED 4: Bold & solid -->
+    <div class="card">
+      <svg width="300" height="320" viewBox="0 0 300 320">
+        <defs>
+          <filter id="glow4">
+            <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+            <feMerge>
+              <feMergeNode in="coloredBlur"/>
+              <feMergeNode in="SourceGraphic"/>
+            </feMerge>
+          </filter>
+          <linearGradient id="shieldFill" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" style="stop-color:#1a1a1a"/>
+            <stop offset="100%" style="stop-color:#0a0a0a"/>
+          </linearGradient>
+        </defs>
+
+        <!-- Bold spear -->
+        <rect x="144" y="5" width="12" height="235" fill="#222"/>
+        <polygon points="150,0 140,25 150,18 160,25" fill="#00ff88" filter="url(#glow4)"/>
+
+        <!-- Solid shield -->
+        <path d="M150 35
+                 L250 68
+                 L250 145
+                 Q250 210 150 250
+                 Q50 210 50 145
+                 L50 68 Z"
+              fill="url(#shieldFill)" stroke="#333" stroke-width="2"/>
+
+        <!-- Bold A -->
+        <polygon points="150,70 205,200 180,200 150,125 120,200 95,200"
+                 fill="#fff"/>
+
+        <!-- Cutout for crossbar effect -->
+        <rect x="115" y="155" width="70" height="14" fill="#0a0a0a"/>
+
+        <!-- Glowing crossbar -->
+        <rect x="120" y="158" width="60" height="8" fill="#00ff88" filter="url(#glow4)"/>
+
+        <!-- Text -->
+        <text x="150" y="282" text-anchor="middle" fill="#fff"
+              font-family="'Arial Black', Impact, sans-serif" font-size="22" letter-spacing="5">ALEXANDER</text>
+        <text x="150" y="308" text-anchor="middle" fill="#00ff88"
+              font-family="Arial, sans-serif" font-size="14" font-weight="bold" letter-spacing="3">one.0</text>
+      </svg>
+      <div class="card-label">Version 4</div>
+      <div class="card-desc">Maximum impact - bold statement</div>
+    </div>
+
+    <!-- COMBINED 5: Layered depth -->
+    <div class="card">
+      <svg width="300" height="320" viewBox="0 0 300 320">
+        <defs>
+          <filter id="glow5">
+            <feGaussianBlur stdDeviation="3.5" result="coloredBlur"/>
+            <feMerge>
+              <feMergeNode in="coloredBlur"/>
+              <feMergeNode in="SourceGraphic"/>
+            </feMerge>
+          </filter>
+          <filter id="shadow5">
+            <feDropShadow dx="0" dy="4" stdDeviation="8" flood-opacity="0.5"/>
+          </filter>
+        </defs>
+
+        <!-- Background shield layer (larger, dimmer) -->
+        <path d="M150 30
+                 L260 65
+                 L260 150
+                 Q260 220 150 260
+                 Q40 220 40 150
+                 L40 65 Z"
+              fill="none" stroke="#151515" stroke-width="2"/>
+
+        <!-- Spear -->
+        <line x1="150" y1="0" x2="150" y2="245" stroke="#282828" stroke-width="5"/>
+        <polygon points="150,-5 140,25 150,15 160,25" fill="#00ff88" filter="url(#glow5)"/>
+
+        <!-- Main shield (foreground) -->
+        <path d="M150 45
+                 L245 75
+                 L245 145
+                 Q245 205 150 242
+                 Q55 205 55 145
+                 L55 75 Z"
+              fill="#0c0c0c" stroke="#00ff88" stroke-width="1" filter="url(#shadow5)"/>
+
+        <!-- Double A effect -->
+        <polygon points="150,80 200,195 178,195 150,130 122,195 100,195"
+                 fill="none" stroke="#222" stroke-width="2"/>
+        <polygon points="150,90 188,188 170,188 150,142 130,188 112,188"
+                 fill="none" stroke="#00ff88" stroke-width="2" filter="url(#glow5)"/>
+
+        <!-- Center energy -->
+        <circle cx="150" cy="145" r="8" fill="none" stroke="#00ff88" stroke-width="1.5" filter="url(#glow5)"/>
+        <circle cx="150" cy="145" r="3" fill="#00ff88" filter="url(#glow5)"/>
+
+        <!-- Horizontal beams -->
+        <line x1="100" y1="145" x2="140" y2="145" stroke="#00ff88" stroke-width="1.5" opacity="0.7"/>
+        <line x1="160" y1="145" x2="200" y2="145" stroke="#00ff88" stroke-width="1.5" opacity="0.7"/>
+
+        <!-- Text -->
+        <text x="150" y="282" text-anchor="middle" fill="#fff"
+              font-family="'SF Mono', Consolas, monospace" font-size="19" letter-spacing="6" font-weight="500">ALEXANDER</text>
+        <text x="150" y="306" text-anchor="middle" fill="#00ff88"
+              font-family="'SF Mono', Consolas, monospace" font-size="12" letter-spacing="3">one.0</text>
+      </svg>
+      <div class="card-label">Version 5</div>
+      <div class="card-desc">Layered shields - depth of protection</div>
+    </div>
+
+    <!-- COMBINED 6: Icon mark only (for app/favicon) -->
+    <div class="card">
+      <svg width="200" height="250" viewBox="0 0 200 250">
+        <defs>
+          <filter id="glow6">
+            <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+            <feMerge>
+              <feMergeNode in="coloredBlur"/>
+              <feMergeNode in="SourceGraphic"/>
+            </feMerge>
+          </filter>
+        </defs>
+
+        <!-- Spear -->
+        <line x1="100" y1="5" x2="100" y2="175" stroke="#2a2a2a" stroke-width="4"/>
+        <polygon points="100,0 93,20 100,14 107,20" fill="#00ff88" filter="url(#glow6)"/>
+
+        <!-- Compact shield -->
+        <path d="M100 30
+                 L165 52
+                 L165 105
+                 Q165 150 100 175
+                 Q35 150 35 105
+                 L35 52 Z"
+              fill="#0a0a0a" stroke="#00ff88" stroke-width="1.5"/>
+
+        <!-- A -->
+        <path d="M100 55 L70 145 M100 55 L130 145"
+              stroke="#fff" stroke-width="2.5" stroke-linecap="round"/>
+        <line x1="78" y1="115" x2="122" y2="115" stroke="#00ff88" stroke-width="2.5" filter="url(#glow6)"/>
+
+        <!-- Top node -->
+        <circle cx="100" cy="55" r="4" fill="#00ff88" filter="url(#glow6)"/>
+
+        <!-- Label -->
+        <text x="100" y="210" text-anchor="middle" fill="#333"
+              font-family="Consolas, monospace" font-size="10" letter-spacing="3">ICON MARK</text>
+      </svg>
+      <div class="card-label">Icon Version</div>
+      <div class="card-desc">Compact for apps & favicons</div>
+    </div>
+
+  </div>
+
+  <p class="section-divider">Hover for glow effect</p>
+
+  <p style="text-align: center; margin-top: 30px; color: #00ff88; font-size: 9px; letter-spacing: 8px; text-transform: uppercase;">
+    Conquer. Protect. Prevail.
+  </p>
+
+</body>
+</html>
