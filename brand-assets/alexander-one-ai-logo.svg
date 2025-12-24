@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300">
+  <defs>
+    <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#00d4ff;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#00ff88;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#00d4ff;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a0a1a;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1a1a2e;stop-opacity:1" />
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="400" height="300" fill="url(#bgGradient)"/>
+
+  <!-- Stylized A Logo -->
+  <g transform="translate(200, 100)" filter="url(#glow)">
+    <!-- Outer triangle frame -->
+    <polygon points="0,-70 60,50 -60,50" fill="none" stroke="url(#logoGradient)" stroke-width="3"/>
+
+    <!-- Inner A shape -->
+    <polygon points="0,-45 35,35 25,35 0,0 -25,35 -35,35" fill="url(#logoGradient)"/>
+
+    <!-- Horizontal bar -->
+    <rect x="-25" y="10" width="50" height="8" fill="#0a0a1a"/>
+
+    <!-- Center dot -->
+    <circle cx="0" cy="-20" r="6" fill="url(#logoGradient)"/>
+  </g>
+
+  <!-- Alexander One Text -->
+  <text x="200" y="200" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="bold" fill="white" letter-spacing="4">
+    ALEXANDER ONE
+  </text>
+
+  <!-- Tagline -->
+  <text x="200" y="235" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" fill="#00ff88" letter-spacing="2">
+    INTELLIGENT HOME PROTECTION
+  </text>
+
+  <!-- Accent lines -->
+  <line x1="80" y1="260" x2="160" y2="260" stroke="url(#logoGradient)" stroke-width="2" opacity="0.5"/>
+  <line x1="240" y1="260" x2="320" y2="260" stroke="url(#logoGradient)" stroke-width="2" opacity="0.5"/>
+</svg>

@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alexander One - AI Logo Preview</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: linear-gradient(135deg, #0a0a1a 0%, #1a1a2e 100%);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 40px 20px;
+        }
+
+        h1 {
+            color: #fff;
+            margin-bottom: 10px;
+            font-size: 24px;
+        }
+
+        .subtitle {
+            color: #00ff88;
+            margin-bottom: 40px;
+            font-size: 14px;
+            letter-spacing: 2px;
+        }
+
+        .logo-container {
+            background: linear-gradient(135deg, #0a0a1a 0%, #1a1a2e 100%);
+            border: 2px solid #00ff88;
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 40px;
+            box-shadow: 0 0 40px rgba(0, 255, 136, 0.2);
+        }
+
+        .logo-variants {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            width: 100%;
+        }
+
+        .variant {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 15px;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .variant h3 {
+            color: #00d4ff;
+            margin-bottom: 20px;
+            font-size: 16px;
+        }
+
+        .variant.dark {
+            background: #0a0a1a;
+        }
+
+        .variant.light {
+            background: #ffffff;
+        }
+
+        /* Main Logo Styles */
+        .logo-main {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .logo-icon {
+            width: 120px;
+            height: 120px;
+            position: relative;
+        }
+
+        .logo-icon svg {
+            width: 100%;
+            height: 100%;
+        }
+
+        .logo-text {
+            font-size: 32px;
+            font-weight: bold;
+            letter-spacing: 4px;
+            color: #fff;
+        }
+
+        .logo-text.dark-text {
+            color: #1a1a2e;
+        }
+
+        .tagline {
+            font-size: 12px;
+            letter-spacing: 3px;
+            color: #00ff88;
+        }
+
+        .tagline.dark-text {
+            color: #1a1a2e;
+        }
+
+        /* Download buttons */
+        .download-section {
+            margin-top: 40px;
+            text-align: center;
+        }
+
+        .download-section h3 {
+            color: #fff;
+            margin-bottom: 20px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            margin: 10px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #00d4ff, #00ff88);
+            color: #0a0a1a;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(0, 255, 136, 0.4);
+        }
+
+        .file-info {
+            color: #888;
+            font-size: 12px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Alexander One Logo</h1>
+    <p class="subtitle">AI-GENERATED FUTURISTIC DESIGN</p>
+
+    <!-- Main Logo Display -->
+    <div class="logo-container">
+        <div class="logo-main">
+            <div class="logo-icon">
+                <svg viewBox="0 0 120 120">
+                    <defs>
+                        <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#00d4ff"/>
+                            <stop offset="50%" style="stop-color:#00ff88"/>
+                            <stop offset="100%" style="stop-color:#00d4ff"/>
+                        </linearGradient>
+                        <filter id="glow1">
+                            <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+                            <feMerge>
+                                <feMergeNode in="coloredBlur"/>
+                                <feMergeNode in="SourceGraphic"/>
+                            </feMerge>
+                        </filter>
+                    </defs>
+                    <g transform="translate(60, 60)" filter="url(#glow1)">
+                        <polygon points="0,-50 45,40 -45,40" fill="none" stroke="url(#grad1)" stroke-width="2.5"/>
+                        <polygon points="0,-32 25,28 18,28 0,2 -18,28 -25,28" fill="url(#grad1)"/>
+                        <rect x="-18" y="8" width="36" height="6" fill="#0a0a1a"/>
+                        <circle cx="0" cy="-14" r="5" fill="url(#grad1)"/>
+                    </g>
+                </svg>
+            </div>
+            <div class="logo-text">ALEXANDER ONE</div>
+            <div class="tagline">INTELLIGENT HOME PROTECTION</div>
+        </div>
+    </div>
+
+    <!-- Logo Variants -->
+    <div class="logo-variants">
+        <div class="variant dark">
+            <h3>Dark Background</h3>
+            <div class="logo-main">
+                <div class="logo-icon">
+                    <svg viewBox="0 0 120 120">
+                        <defs>
+                            <linearGradient id="grad2" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#00d4ff"/>
+                                <stop offset="50%" style="stop-color:#00ff88"/>
+                                <stop offset="100%" style="stop-color:#00d4ff"/>
+                            </linearGradient>
+                        </defs>
+                        <g transform="translate(60, 60)">
+                            <polygon points="0,-50 45,40 -45,40" fill="none" stroke="url(#grad2)" stroke-width="2.5"/>
+                            <polygon points="0,-32 25,28 18,28 0,2 -18,28 -25,28" fill="url(#grad2)"/>
+                            <rect x="-18" y="8" width="36" height="6" fill="#0a0a1a"/>
+                            <circle cx="0" cy="-14" r="5" fill="url(#grad2)"/>
+                        </g>
+                    </svg>
+                </div>
+                <div class="logo-text">ALEXANDER ONE</div>
+                <div class="tagline">INTELLIGENT HOME PROTECTION</div>
+            </div>
+        </div>
+
+        <div class="variant light">
+            <h3>Light Background</h3>
+            <div class="logo-main">
+                <div class="logo-icon">
+                    <svg viewBox="0 0 120 120">
+                        <defs>
+                            <linearGradient id="grad3" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#0066cc"/>
+                                <stop offset="100%" style="stop-color:#1a1a2e"/>
+                            </linearGradient>
+                        </defs>
+                        <g transform="translate(60, 60)">
+                            <polygon points="0,-50 45,40 -45,40" fill="none" stroke="url(#grad3)" stroke-width="2.5"/>
+                            <polygon points="0,-32 25,28 18,28 0,2 -18,28 -25,28" fill="url(#grad3)"/>
+                            <rect x="-18" y="8" width="36" height="6" fill="#ffffff"/>
+                            <circle cx="0" cy="-14" r="5" fill="url(#grad3)"/>
+                        </g>
+                    </svg>
+                </div>
+                <div class="logo-text dark-text">ALEXANDER ONE</div>
+                <div class="tagline dark-text">INTELLIGENT HOME PROTECTION</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Download Section -->
+    <div class="download-section">
+        <h3>Download Logo Files</h3>
+        <a href="alexander-one-ai-logo.svg" download class="btn btn-primary">Download SVG</a>
+        <p class="file-info">SVG file location: /Users/ericdeloera/alexander-one/brand-assets/alexander-one-ai-logo.svg</p>
+    </div>
+</body>
+</html>

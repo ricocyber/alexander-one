@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alexander One - Product Showcase</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-navy: #1a1a2e;
+            --accent-green: #00ff88;
+            --accent-cyan: #00d4ff;
+            --dark-bg: #0d0d1a;
+            --card-bg: #16162a;
+            --text-primary: #ffffff;
+            --text-secondary: #a0a0b0;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--dark-bg);
+            color: var(--text-primary);
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: radial-gradient(ellipse at center, #1a1a3e 0%, var(--dark-bg) 70%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(0,255,136,0.1) 0%, transparent 70%);
+            animation: pulse 4s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); opacity: 0.5; }
+            50% { transform: scale(1.2); opacity: 0.8; }
+        }
+
+        .logo-container {
+            position: relative;
+            z-index: 10;
+            text-align: center;
+        }
+
+        .spartan-helmet {
+            width: 200px;
+            height: 200px;
+            margin-bottom: 30px;
+            filter: drop-shadow(0 0 30px rgba(0,255,136,0.3));
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+
+        .brand-name {
+            font-size: 4rem;
+            font-weight: 800;
+            letter-spacing: 8px;
+            background: linear-gradient(135deg, var(--text-primary) 0%, var(--accent-green) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 20px;
+        }
+
+        .tagline {
+            font-size: 1.4rem;
+            color: var(--text-secondary);
+            letter-spacing: 3px;
+            font-weight: 300;
+        }
+
+        .stat-banner {
+            margin-top: 60px;
+            display: flex;
+            gap: 60px;
+        }
+
+        .stat {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--accent-green);
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        /* Products Section */
+        .products-section {
+            padding: 100px 50px;
+            background: linear-gradient(180deg, var(--dark-bg) 0%, var(--primary-navy) 100%);
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: var(--text-secondary);
+            margin-bottom: 80px;
+            font-size: 1.2rem;
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .product-card {
+            background: var(--card-bg);
+            border-radius: 24px;
+            padding: 40px;
+            position: relative;
+            overflow: hidden;
+            border: 1px solid rgba(255,255,255,0.05);
+            transition: all 0.4s ease;
+        }
+
+        .product-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--accent-green);
+            box-shadow: 0 20px 60px rgba(0,255,136,0.1);
+        }
+
+        .product-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--accent-green), var(--accent-cyan));
+        }
+
+        .product-icon {
+            width: 100px;
+            height: 100px;
+            background: linear-gradient(135deg, var(--accent-green), var(--accent-cyan));
+            border-radius: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 30px;
+            font-size: 2.5rem;
+        }
+
+        .product-name {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .product-tagline {
+            color: var(--accent-green);
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 20px;
+        }
+
+        .product-features {
+            list-style: none;
+        }
+
+        .product-features li {
+            padding: 8px 0;
+            color: var(--text-secondary);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .product-features li::before {
+            content: '◆';
+            color: var(--accent-green);
+            font-size: 0.6rem;
+        }
+
+        .product-price {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .price {
+            font-size: 1.8rem;
+            font-weight: 700;
+        }
+
+        .price-label {
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+        }
+
+        /* Hub Special Card */
+        .hub-card {
+            grid-column: span 2;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+
+        .hub-visual {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .hub-device {
+            width: 280px;
+            height: 200px;
+            background: linear-gradient(145deg, #2a2a4a, #1a1a2e);
+            border-radius: 20px;
+            border: 3px solid #3a3a5a;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            box-shadow: 0 30px 60px rgba(0,0,0,0.5);
+        }
+
+        .hub-screen {
+            flex: 1;
+            background: linear-gradient(135deg, #0a2a1a, #0a1a2a);
+            margin: 10px;
+            border-radius: 12px;
+            padding: 15px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .hub-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .hub-logo {
+            font-size: 0.7rem;
+            font-weight: 700;
+            color: var(--accent-green);
+        }
+
+        .hub-status {
+            font-size: 0.6rem;
+            color: var(--accent-green);
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .status-dot {
+            width: 6px;
+            height: 6px;
+            background: var(--accent-green);
+            border-radius: 50%;
+            animation: blink 2s infinite;
+        }
+
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.3; }
+        }
+
+        .hub-metrics {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 8px;
+            flex: 1;
+        }
+
+        .metric {
+            background: rgba(0,255,136,0.1);
+            border-radius: 8px;
+            padding: 8px;
+            text-align: center;
+        }
+
+        .metric-value {
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--accent-green);
+        }
+
+        .metric-label {
+            font-size: 0.5rem;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+        }
+
+        .hub-base {
+            height: 15px;
+            background: linear-gradient(180deg, #3a3a5a, #2a2a4a);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .hub-speaker {
+            width: 60px;
+            height: 4px;
+            background: #4a4a6a;
+            border-radius: 2px;
+        }
+
+        /* Timeline Section */
+        .timeline-section {
+            padding: 100px 50px;
+            background: var(--dark-bg);
+        }
+
+        .timeline {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: linear-gradient(180deg, var(--accent-green), var(--accent-cyan));
+        }
+
+        .timeline-item {
+            display: flex;
+            margin-bottom: 40px;
+            position: relative;
+        }
+
+        .timeline-item:nth-child(odd) {
+            flex-direction: row-reverse;
+        }
+
+        .timeline-content {
+            width: 45%;
+            padding: 30px;
+            background: var(--card-bg);
+            border-radius: 16px;
+        }
+
+        .timeline-time {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--accent-green);
+            color: var(--dark-bg);
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-weight: 700;
+            font-size: 0.9rem;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            padding: 150px 50px;
+            text-align: center;
+            background: radial-gradient(ellipse at center, #1a2a3e 0%, var(--dark-bg) 70%);
+        }
+
+        .cta-title {
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 30px;
+            background: linear-gradient(135deg, var(--text-primary), var(--accent-green));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .cta-subtitle {
+            font-size: 1.3rem;
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 0 auto 50px;
+            line-height: 1.8;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .btn {
+            padding: 18px 40px;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1rem;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--accent-green), var(--accent-cyan));
+            color: var(--dark-bg);
+        }
+
+        .btn-primary:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 40px rgba(0,255,136,0.3);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            border: 2px solid var(--accent-green);
+            color: var(--accent-green);
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="logo-container">
+            <svg class="spartan-helmet" viewBox="0 0 100 100">
+                <defs>
+                    <linearGradient id="helmetGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" style="stop-color:#ffffff"/>
+                        <stop offset="100%" style="stop-color:#00ff88"/>
+                    </linearGradient>
+                </defs>
+                <!-- Spartan Helmet SVG -->
+                <path fill="url(#helmetGrad)" d="M50 5 C25 5 15 25 15 45 L15 70 C15 75 18 78 22 80 L22 95 L35 95 L35 82 L40 82 L40 95 L60 95 L60 82 L65 82 L65 95 L78 95 L78 80 C82 78 85 75 85 70 L85 45 C85 25 75 5 50 5 Z M35 40 L35 65 L30 65 L30 40 Z M70 40 L70 65 L65 65 L65 40 Z M50 10 C70 10 80 28 80 45 L80 48 L20 48 L20 45 C20 28 30 10 50 10 Z"/>
+                <!-- Crest -->
+                <path fill="url(#helmetGrad)" d="M50 0 C55 0 58 3 58 8 L58 35 C58 38 55 40 50 40 C45 40 42 38 42 35 L42 8 C42 3 45 0 50 0 Z"/>
+            </svg>
+            <h1 class="brand-name">ALEXANDER ONE</h1>
+            <p class="tagline">Safety at Home. Safety When Away. Always Watching.</p>
+
+            <div class="stat-banner">
+                <div class="stat">
+                    <div class="stat-number">&lt;3s</div>
+                    <div class="stat-label">Response Time</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">93%</div>
+                    <div class="stat-label">Prediction Accuracy</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">$13B</div>
+                    <div class="stat-label">Preventable Damage/Year</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products-section">
+        <h2 class="section-title">The Complete Protection System</h2>
+        <p class="section-subtitle">7 intelligent devices working together to predict and prevent home disasters</p>
+
+        <div class="products-grid">
+            <!-- Alexander Hub - Featured -->
+            <div class="product-card hub-card">
+                <div class="hub-visual">
+                    <div class="hub-device">
+                        <div class="hub-screen">
+                            <div class="hub-header">
+                                <span class="hub-logo">ALEXANDER ONE</span>
+                                <span class="hub-status"><span class="status-dot"></span> ALL SYSTEMS OK</span>
+                            </div>
+                            <div class="hub-metrics">
+                                <div class="metric">
+                                    <div class="metric-value">72°</div>
+                                    <div class="metric-label">Air Temp</div>
+                                </div>
+                                <div class="metric">
+                                    <div class="metric-value">45%</div>
+                                    <div class="metric-label">Humidity</div>
+                                </div>
+                                <div class="metric">
+                                    <div class="metric-value">12</div>
+                                    <div class="metric-label">AQI</div>
+                                </div>
+                                <div class="metric">
+                                    <div class="metric-value">55psi</div>
+                                    <div class="metric-label">Water</div>
+                                </div>
+                                <div class="metric">
+                                    <div class="metric-value">0</div>
+                                    <div class="metric-label">Gas PPM</div>
+                                </div>
+                                <div class="metric">
+                                    <div class="metric-value">OK</div>
+                                    <div class="metric-label">Structure</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="hub-base">
+                            <div class="hub-speaker"></div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="product-icon">🧠</div>
+                    <h3 class="product-name">Alexander Hub 1.1</h3>
+                    <p class="product-tagline">The Brain That Protects</p>
+                    <ul class="product-features">
+                        <li>7" HD Touchscreen Display</li>
+                        <li>Edge AI with XGBoost ML</li>
+                        <li>Built-in Air Quality Sensors</li>
+                        <li>8-Hour Battery Backup</li>
+                        <li>LTE Cellular Failover</li>
+                        <li>Tesla Powerwall Integration</li>
+                        <li>Multi-Protocol (Zigbee, WiFi, BLE)</li>
+                    </ul>
+                    <div class="product-price">
+                        <div>
+                            <div class="price">$699</div>
+                            <div class="price-label">MSRP</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Water Monitor -->
+            <div class="product-card">
+                <div class="product-icon">💧</div>
+                <h3 class="product-name">Water Guardian</h3>
+                <p class="product-tagline">Intelligent Shutoff</p>
+                <ul class="product-features">
+                    <li>3/4" Motorized Ball Valve</li>
+                    <li>Auto Shutoff in 800ms</li>
+                    <li>Flow Rate Monitoring</li>
+                    <li>Water Quality (TDS, Turbidity)</li>
+                    <li>Pressure Monitoring</li>
+                    <li>12V Battery Backup</li>
+                </ul>
+                <div class="product-price">
+                    <div>
+                        <div class="price">$649</div>
+                        <div class="price-label">MSRP</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Air Sensor -->
+            <div class="product-card">
+                <div class="product-icon">🌬️</div>
+                <h3 class="product-name">Air Sentinel</h3>
+                <p class="product-tagline">Breathe Easy</p>
+                <ul class="product-features">
+                    <li>PM2.5 / PM10 Detection</li>
+                    <li>CO2 Monitoring</li>
+                    <li>VOC Detection</li>
+                    <li>Temperature & Humidity</li>
+                    <li>E-Ink Display</li>
+                    <li>Battery or USB-C Power</li>
+                </ul>
+                <div class="product-price">
+                    <div>
+                        <div class="price">$149</div>
+                        <div class="price-label">MSRP</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Gas Detector -->
+            <div class="product-card">
+                <div class="product-icon">🔥</div>
+                <h3 class="product-name">Gas Guardian</h3>
+                <p class="product-tagline">Silent Protector</p>
+                <ul class="product-features">
+                    <li>Methane Detection</li>
+                    <li>Carbon Monoxide (CO)</li>
+                    <li>Propane Detection</li>
+                    <li>85dB Alarm</li>
+                    <li>Zigbee 3.0 Wireless</li>
+                    <li>10-Year Battery Life</li>
+                </ul>
+                <div class="product-price">
+                    <div>
+                        <div class="price">$129</div>
+                        <div class="price-label">MSRP</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Foundation Monitor -->
+            <div class="product-card">
+                <div class="product-icon">🏠</div>
+                <h3 class="product-name">Foundation Monitor</h3>
+                <p class="product-tagline">Structural Intelligence</p>
+                <ul class="product-features">
+                    <li>0.001° Tilt Detection</li>
+                    <li>Vibration Analysis</li>
+                    <li>Settlement Tracking</li>
+                    <li>Crack Prediction</li>
+                    <li>Weatherproof IP67</li>
+                    <li>5-Year Battery</li>
+                </ul>
+                <div class="product-price">
+                    <div>
+                        <div class="price">$179</div>
+                        <div class="price-label">MSRP</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Leak Spots -->
+            <div class="product-card">
+                <div class="product-icon">📍</div>
+                <h3 class="product-name">Leak Spots</h3>
+                <p class="product-tagline">Point Protection</p>
+                <ul class="product-features">
+                    <li>Instant Water Detection</li>
+                    <li>Temperature Sensing</li>
+                    <li>Freeze Alerts</li>
+                    <li>Under Sinks, Appliances</li>
+                    <li>Water Heater Placement</li>
+                    <li>3-Year Battery</li>
+                </ul>
+                <div class="product-price">
+                    <div>
+                        <div class="price">$59</div>
+                        <div class="price-label">MSRP (3-Pack: $149)</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- HVAC Sentinel -->
+            <div class="product-card">
+                <div class="product-icon">❄️</div>
+                <h3 class="product-name">HVAC Sentinel</h3>
+                <p class="product-tagline">Climate Guardian</p>
+                <ul class="product-features">
+                    <li>Filter Pressure Monitoring</li>
+                    <li>UV-C Pathogen Control</li>
+                    <li>Airflow Measurement</li>
+                    <li>Runtime Optimization</li>
+                    <li>Energy Tracking</li>
+                    <li>Filter Change Prediction</li>
+                </ul>
+                <div class="product-price">
+                    <div>
+                        <div class="price">$249</div>
+                        <div class="price-label">MSRP</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3-Second Response Timeline -->
+    <section class="timeline-section">
+        <h2 class="section-title">The 3-Second Miracle</h2>
+        <p class="section-subtitle">How Alexander One responds to emergencies faster than any competitor</p>
+
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <h4 style="color: var(--accent-green); margin-bottom: 10px;">Leak Detected</h4>
+                    <p style="color: var(--text-secondary);">Water sensor triggers instantly</p>
+                </div>
+                <span class="timeline-time">0ms</span>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <h4 style="color: var(--accent-green); margin-bottom: 10px;">AI Confirmation</h4>
+                    <p style="color: var(--text-secondary);">Machine learning eliminates false alarms</p>
+                </div>
+                <span class="timeline-time">100ms</span>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <h4 style="color: var(--accent-green); margin-bottom: 10px;">Tesla Coordinates</h4>
+                    <p style="color: var(--text-secondary);">Powerwall prioritizes sump pump power</p>
+                </div>
+                <span class="timeline-time">300ms</span>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <h4 style="color: var(--accent-green); margin-bottom: 10px;">Valve Closed</h4>
+                    <p style="color: var(--text-secondary);">Water supply automatically shut off</p>
+                </div>
+                <span class="timeline-time">800ms</span>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <h4 style="color: var(--accent-green); margin-bottom: 10px;">You're Notified</h4>
+                    <p style="color: var(--text-secondary);">Push notification to your phone</p>
+                </div>
+                <span class="timeline-time">1000ms</span>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <h4 style="color: var(--accent-green); margin-bottom: 10px;">Claim Prevented</h4>
+                    <p style="color: var(--text-secondary);">Insurance API logs the save</p>
+                </div>
+                <span class="timeline-time">2000ms</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <h2 class="cta-title">Protect What Matters Most</h2>
+        <p class="cta-subtitle">Alexander One doesn't just detect problems—it predicts them before they happen and responds in under 3 seconds. Your home deserves the best protection available.</p>
+        <div class="cta-buttons">
+            <a href="#" class="btn btn-primary">Join the Waitlist</a>
+            <a href="#" class="btn btn-secondary">Learn More</a>
+        </div>
+    </section>
+</body>
+</html>

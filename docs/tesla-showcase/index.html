@@ -1,0 +1,1015 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alexander One × Tesla Powerwall | Intelligent Home Protection</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --tesla-red: #e82127;
+            --alexander-cyan: #00d4ff;
+            --alexander-green: #00ff88;
+            --dark-bg: #0a0a0a;
+            --card-bg: #111111;
+            --text-primary: #ffffff;
+            --text-secondary: #888888;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--dark-bg);
+            color: var(--text-primary);
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            padding: 20px 60px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(10, 10, 10, 0.8);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 800;
+            letter-spacing: 2px;
+            background: linear-gradient(135deg, var(--alexander-cyan), var(--alexander-green));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 40px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            transition: color 0.3s;
+            letter-spacing: 1px;
+        }
+
+        .nav-links a:hover {
+            color: var(--text-primary);
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 120px 20px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background:
+                radial-gradient(ellipse at 20% 80%, rgba(0, 212, 255, 0.15) 0%, transparent 50%),
+                radial-gradient(ellipse at 80% 20%, rgba(0, 255, 136, 0.1) 0%, transparent 50%),
+                radial-gradient(ellipse at 50% 50%, rgba(232, 33, 39, 0.05) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 10px 24px;
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 50px;
+            font-size: 13px;
+            font-weight: 500;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 40px;
+            animation: fadeInUp 1s ease;
+        }
+
+        .hero-badge .pulse {
+            width: 8px;
+            height: 8px;
+            background: var(--alexander-green);
+            border-radius: 50%;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.5; transform: scale(1.2); }
+        }
+
+        .hero h1 {
+            font-size: clamp(48px, 8vw, 96px);
+            font-weight: 900;
+            line-height: 1;
+            margin-bottom: 30px;
+            animation: fadeInUp 1s ease 0.2s both;
+        }
+
+        .hero h1 span {
+            display: block;
+            background: linear-gradient(135deg, var(--alexander-cyan) 0%, var(--alexander-green) 50%, var(--tesla-red) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero-subtitle {
+            font-size: clamp(18px, 2.5vw, 24px);
+            color: var(--text-secondary);
+            max-width: 700px;
+            margin-bottom: 50px;
+            font-weight: 300;
+            animation: fadeInUp 1s ease 0.4s both;
+        }
+
+        .hero-stats {
+            display: flex;
+            gap: 60px;
+            margin-bottom: 60px;
+            animation: fadeInUp 1s ease 0.6s both;
+        }
+
+        .stat {
+            text-align: center;
+        }
+
+        .stat-value {
+            font-size: 48px;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--alexander-cyan), var(--alexander-green));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .stat-label {
+            font-size: 12px;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-top: 5px;
+        }
+
+        .cta-group {
+            display: flex;
+            gap: 20px;
+            animation: fadeInUp 1s ease 0.8s both;
+        }
+
+        .btn {
+            padding: 18px 40px;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: none;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--alexander-cyan), var(--alexander-green));
+            color: var(--dark-bg);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 20px 40px rgba(0, 212, 255, 0.3);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--text-primary);
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+
+        .btn-secondary:hover {
+            border-color: var(--alexander-cyan);
+            background: rgba(0, 212, 255, 0.1);
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Problem Section */
+        .problem-section {
+            padding: 150px 60px;
+            background: linear-gradient(180deg, var(--dark-bg) 0%, #0f0f0f 100%);
+        }
+
+        .section-header {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 80px;
+        }
+
+        .section-label {
+            font-size: 12px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--alexander-cyan);
+            margin-bottom: 20px;
+        }
+
+        .section-title {
+            font-size: clamp(36px, 5vw, 56px);
+            font-weight: 800;
+            margin-bottom: 20px;
+        }
+
+        .section-subtitle {
+            font-size: 18px;
+            color: var(--text-secondary);
+        }
+
+        .problem-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .problem-card {
+            background: var(--card-bg);
+            border-radius: 20px;
+            padding: 50px 40px;
+            text-align: center;
+            border: 1px solid rgba(255,255,255,0.05);
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .problem-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--tesla-red), #ff6b6b);
+            transform: scaleX(0);
+            transition: transform 0.4s ease;
+        }
+
+        .problem-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .problem-card:hover {
+            transform: translateY(-10px);
+            border-color: rgba(232, 33, 39, 0.3);
+        }
+
+        .problem-icon {
+            font-size: 48px;
+            margin-bottom: 30px;
+        }
+
+        .problem-value {
+            font-size: 56px;
+            font-weight: 900;
+            color: var(--tesla-red);
+            margin-bottom: 10px;
+        }
+
+        .problem-label {
+            font-size: 16px;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+
+        /* Tesla Integration Section */
+        .tesla-section {
+            padding: 150px 60px;
+            background: #080808;
+            position: relative;
+        }
+
+        .tesla-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="1" fill="%23ffffff" fill-opacity="0.03"/></svg>');
+            background-size: 50px 50px;
+        }
+
+        .tesla-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 100px;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .tesla-visual {
+            position: relative;
+        }
+
+        .integration-diagram {
+            background: linear-gradient(135deg, #0a0a0a, #151515);
+            border-radius: 30px;
+            padding: 60px;
+            border: 1px solid rgba(255,255,255,0.05);
+            position: relative;
+        }
+
+        .device-hub {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .device-row {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .device-node {
+            width: 80px;
+            height: 80px;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        .device-node.alexander {
+            background: linear-gradient(135deg, rgba(0, 212, 255, 0.2), rgba(0, 255, 136, 0.2));
+            border: 2px solid var(--alexander-cyan);
+            width: 120px;
+            height: 120px;
+            font-size: 48px;
+        }
+
+        .device-node.tesla {
+            background: linear-gradient(135deg, rgba(232, 33, 39, 0.2), rgba(255, 107, 107, 0.2));
+            border: 2px solid var(--tesla-red);
+        }
+
+        .device-node.sensor {
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .device-node:hover {
+            transform: scale(1.1);
+        }
+
+        .connection-line {
+            position: absolute;
+            height: 2px;
+            background: linear-gradient(90deg, var(--alexander-cyan), var(--tesla-red));
+            animation: dataFlow 2s infinite;
+        }
+
+        @keyframes dataFlow {
+            0%, 100% { opacity: 0.3; }
+            50% { opacity: 1; }
+        }
+
+        .tesla-info h2 {
+            font-size: 48px;
+            font-weight: 800;
+            margin-bottom: 30px;
+            line-height: 1.1;
+        }
+
+        .tesla-info h2 span {
+            color: var(--tesla-red);
+        }
+
+        .tesla-info p {
+            font-size: 18px;
+            color: var(--text-secondary);
+            margin-bottom: 40px;
+            line-height: 1.8;
+        }
+
+        .feature-list {
+            list-style: none;
+        }
+
+        .feature-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            margin-bottom: 25px;
+            font-size: 16px;
+        }
+
+        .feature-list .check {
+            width: 24px;
+            height: 24px;
+            background: linear-gradient(135deg, var(--alexander-cyan), var(--alexander-green));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            font-size: 14px;
+        }
+
+        /* Devices Section */
+        .devices-section {
+            padding: 150px 60px;
+            background: var(--dark-bg);
+        }
+
+        .devices-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .device-card {
+            background: linear-gradient(135deg, #0f0f0f, #1a1a1a);
+            border-radius: 24px;
+            padding: 50px 40px;
+            border: 1px solid rgba(255,255,255,0.05);
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .device-card::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(0, 212, 255, 0.1) 0%, transparent 70%);
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+
+        .device-card:hover::after {
+            opacity: 1;
+        }
+
+        .device-card:hover {
+            transform: translateY(-10px);
+            border-color: rgba(0, 212, 255, 0.3);
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5);
+        }
+
+        .device-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, rgba(0, 212, 255, 0.15), rgba(0, 255, 136, 0.15));
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 36px;
+            margin-bottom: 30px;
+        }
+
+        .device-card h3 {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+
+        .device-card p {
+            color: var(--text-secondary);
+            font-size: 15px;
+            margin-bottom: 25px;
+            line-height: 1.7;
+        }
+
+        .device-spec {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 13px;
+            color: var(--alexander-cyan);
+            font-weight: 500;
+        }
+
+        /* Timeline Response */
+        .timeline-section {
+            padding: 150px 60px;
+            background: #050505;
+        }
+
+        .timeline-container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .timeline {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            position: relative;
+            padding: 60px 0;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--alexander-cyan), var(--alexander-green), var(--tesla-red));
+            border-radius: 2px;
+        }
+
+        .timeline-item {
+            text-align: center;
+            position: relative;
+            flex: 1;
+        }
+
+        .timeline-dot {
+            width: 60px;
+            height: 60px;
+            background: var(--dark-bg);
+            border: 4px solid var(--alexander-cyan);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            font-size: 24px;
+            position: relative;
+            z-index: 1;
+            transition: all 0.3s ease;
+        }
+
+        .timeline-item:hover .timeline-dot {
+            transform: scale(1.2);
+            background: linear-gradient(135deg, var(--alexander-cyan), var(--alexander-green));
+        }
+
+        .timeline-time {
+            font-size: 36px;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--alexander-cyan), var(--alexander-green));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 10px;
+        }
+
+        .timeline-label {
+            font-size: 14px;
+            color: var(--text-secondary);
+        }
+
+        /* CTA Section */
+        .cta-section {
+            padding: 150px 60px;
+            background: linear-gradient(135deg, #0a0a0a 0%, #111 50%, #0a0a0a 100%);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 800px;
+            height: 800px;
+            background: radial-gradient(circle, rgba(0, 212, 255, 0.1) 0%, transparent 70%);
+        }
+
+        .cta-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .cta-section h2 {
+            font-size: clamp(36px, 5vw, 64px);
+            font-weight: 900;
+            margin-bottom: 30px;
+        }
+
+        .cta-section p {
+            font-size: 20px;
+            color: var(--text-secondary);
+            margin-bottom: 50px;
+        }
+
+        /* Footer */
+        footer {
+            padding: 60px;
+            background: #050505;
+            border-top: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .footer-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .footer-logo {
+            font-size: 20px;
+            font-weight: 800;
+            letter-spacing: 2px;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 40px;
+        }
+
+        .footer-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: var(--alexander-cyan);
+        }
+
+        .footer-legal {
+            font-size: 12px;
+            color: var(--text-secondary);
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .problem-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .tesla-content {
+                grid-template-columns: 1fr;
+                gap: 60px;
+            }
+
+            nav {
+                padding: 15px 30px;
+            }
+
+            .nav-links {
+                display: none;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero-stats {
+                flex-direction: column;
+                gap: 30px;
+            }
+
+            .cta-group {
+                flex-direction: column;
+            }
+
+            .timeline {
+                flex-direction: column;
+                gap: 40px;
+            }
+
+            .timeline::before {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="logo">ALEXANDER ONE</div>
+        <ul class="nav-links">
+            <li><a href="#problem">The Problem</a></li>
+            <li><a href="#integration">Tesla Integration</a></li>
+            <li><a href="#devices">Devices</a></li>
+            <li><a href="#response">Response Time</a></li>
+            <li><a href="#contact">Partner With Us</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-badge">
+            <span class="pulse"></span>
+            Tesla Powerwall Integration Ready
+        </div>
+        <h1>
+            <span>Intelligent Home</span>
+            Protection
+        </h1>
+        <p class="hero-subtitle">
+            The first unified smart home protection platform designed to integrate
+            seamlessly with Tesla Powerwall for complete energy and safety automation.
+        </p>
+        <div class="hero-stats">
+            <div class="stat">
+                <div class="stat-value">$13B</div>
+                <div class="stat-label">Annual Water Damage</div>
+            </div>
+            <div class="stat">
+                <div class="stat-value">3 sec</div>
+                <div class="stat-label">Response Time</div>
+            </div>
+            <div class="stat">
+                <div class="stat-value">7</div>
+                <div class="stat-label">Intelligent Devices</div>
+            </div>
+        </div>
+        <div class="cta-group">
+            <a href="#integration" class="btn btn-primary">Explore Integration</a>
+            <a href="#contact" class="btn btn-secondary">Request Demo</a>
+        </div>
+    </section>
+
+    <!-- Problem Section -->
+    <section class="problem-section" id="problem">
+        <div class="section-header">
+            <div class="section-label">The Problem</div>
+            <h2 class="section-title">Home Disasters Cost Billions</h2>
+            <p class="section-subtitle">Every year, preventable home disasters devastate families and drain insurance resources</p>
+        </div>
+        <div class="problem-grid">
+            <div class="problem-card">
+                <div class="problem-icon">💧</div>
+                <div class="problem-value">$13B</div>
+                <div class="problem-label">Annual water damage claims in the US alone. 14,000 Americans experience water emergencies daily.</div>
+            </div>
+            <div class="problem-card">
+                <div class="problem-icon">🔥</div>
+                <div class="problem-value">33%</div>
+                <div class="problem-label">Of home fires caused by unattended cooking. Alexander One is the ONLY system that prevents this.</div>
+            </div>
+            <div class="problem-card">
+                <div class="problem-icon">⚡</div>
+                <div class="problem-value">96%</div>
+                <div class="problem-label">Claim reduction achievable with smart detection and automatic shutoff systems.</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tesla Integration Section -->
+    <section class="tesla-section" id="integration">
+        <div class="tesla-content">
+            <div class="tesla-visual">
+                <div class="integration-diagram">
+                    <div class="device-hub">
+                        <div class="device-row">
+                            <div class="device-node sensor">💧</div>
+                            <div class="device-node sensor">🌡️</div>
+                            <div class="device-node sensor">💨</div>
+                        </div>
+                        <div class="device-row">
+                            <div class="device-node sensor">🔥</div>
+                            <div class="device-node alexander">🛡️</div>
+                            <div class="device-node sensor">⚡</div>
+                        </div>
+                        <div class="device-row">
+                            <div class="device-node tesla">T</div>
+                            <div class="device-node sensor">🏠</div>
+                            <div class="device-node sensor">📱</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tesla-info">
+                <div class="section-label">Strategic Partnership</div>
+                <h2>Alexander One <span>× Tesla</span> Powerwall</h2>
+                <p>
+                    When Alexander One detects a water leak, gas leak, or fire threat, it doesn't just shut off the hazard—it communicates directly with Tesla Powerwall to optimize energy response, protect critical systems, and ensure your home remains safe and operational.
+                </p>
+                <ul class="feature-list">
+                    <li>
+                        <span class="check">✓</span>
+                        <span><strong>Emergency Power Priority</strong> — Route Powerwall energy to critical safety systems during emergencies</span>
+                    </li>
+                    <li>
+                        <span class="check">✓</span>
+                        <span><strong>Smart Grid Coordination</strong> — Automatic load shedding when threats are detected</span>
+                    </li>
+                    <li>
+                        <span class="check">✓</span>
+                        <span><strong>Unified Dashboard</strong> — See energy + safety status in one Tesla-style interface</span>
+                    </li>
+                    <li>
+                        <span class="check">✓</span>
+                        <span><strong>Cross-System AI</strong> — Predictive algorithms using energy patterns to detect anomalies</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Devices Section -->
+    <section class="devices-section" id="devices">
+        <div class="section-header">
+            <div class="section-label">The Ecosystem</div>
+            <h2 class="section-title">7 Intelligent Devices</h2>
+            <p class="section-subtitle">A complete protection network that thinks, learns, and acts in milliseconds</p>
+        </div>
+        <div class="devices-grid">
+            <div class="device-card">
+                <div class="device-icon">🧠</div>
+                <h3>Alexander Hub</h3>
+                <p>The central intelligence. Processes data from all sensors, runs predictive AI, and coordinates emergency responses in under 3 seconds.</p>
+                <div class="device-spec">⚡ Edge AI Processing • Local-First Security</div>
+            </div>
+            <div class="device-card">
+                <div class="device-icon">💧</div>
+                <h3>Water Guardian</h3>
+                <p>Monitors water pressure 1000x/second. Detects micro-leaks before they become floods and automatically shuts off the main.</p>
+                <div class="device-spec">⚡ 0.1 PSI Sensitivity • Auto Shutoff</div>
+            </div>
+            <div class="device-card">
+                <div class="device-icon">🌬️</div>
+                <h3>Air Sentinel</h3>
+                <p>Tracks VOCs, CO2, humidity, and particulates. Creates a healthy home environment and alerts to air quality threats.</p>
+                <div class="device-spec">⚡ 12 Air Metrics • Health Scoring</div>
+            </div>
+            <div class="device-card">
+                <div class="device-icon">🔥</div>
+                <h3>Gas Guardian</h3>
+                <p>Methane, propane, and CO detection with automatic gas line shutoff. The only system with unattended stove detection.</p>
+                <div class="device-spec">⚡ PPM-Level Detection • Auto Valve Control</div>
+            </div>
+            <div class="device-card">
+                <div class="device-icon">🏗️</div>
+                <h3>Foundation Monitor</h3>
+                <p>Tracks structural vibrations, settling, and moisture intrusion. Early warning for foundation issues that cost $10K+ to fix.</p>
+                <div class="device-spec">⚡ Seismic Sensitivity • Moisture Mapping</div>
+            </div>
+            <div class="device-card">
+                <div class="device-icon">📍</div>
+                <h3>Leak Spots</h3>
+                <p>Place under sinks, near water heaters, in basements. Instant detection of any water contact with precise location reporting.</p>
+                <div class="device-spec">⚡ Battery: 5 Years • Mesh Network</div>
+            </div>
+            <div class="device-card">
+                <div class="device-icon">❄️</div>
+                <h3>HVAC Sentinel</h3>
+                <p>Monitors your climate system efficiency, detects refrigerant leaks, and predicts maintenance needs before failures.</p>
+                <div class="device-spec">⚡ Predictive Maintenance • Energy Optimization</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Timeline Section -->
+    <section class="timeline-section" id="response">
+        <div class="section-header">
+            <div class="section-label">Response Protocol</div>
+            <h2 class="section-title">3-Second Emergency Response</h2>
+            <p class="section-subtitle">From detection to protection in the blink of an eye</p>
+        </div>
+        <div class="timeline-container">
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot">🔍</div>
+                    <div class="timeline-time">0.5s</div>
+                    <div class="timeline-label">Threat Detected</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot">🧠</div>
+                    <div class="timeline-time">1.0s</div>
+                    <div class="timeline-label">AI Analysis</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot">⚡</div>
+                    <div class="timeline-time">2.0s</div>
+                    <div class="timeline-label">Tesla Notified</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot">🛡️</div>
+                    <div class="timeline-time">3.0s</div>
+                    <div class="timeline-label">Threat Neutralized</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section" id="contact">
+        <div class="cta-content">
+            <div class="section-label">Partnership Opportunity</div>
+            <h2>Let's Protect Homes Together</h2>
+            <p>Alexander One + Tesla Powerwall represents the future of intelligent home protection. We're ready to integrate.</p>
+            <div class="cta-group" style="justify-content: center;">
+                <a href="mailto:partnerships@alexanderone.com" class="btn btn-primary">Request Partnership Meeting</a>
+                <a href="https://github.com/ricocyber/alexander-one" class="btn btn-secondary">View Technical Docs</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">ALEXANDER ONE</div>
+            <div class="footer-links">
+                <a href="https://github.com/ricocyber/alexander-one">GitHub</a>
+                <a href="#">Documentation</a>
+                <a href="#">API Reference</a>
+                <a href="#">Press Kit</a>
+            </div>
+            <div class="footer-legal">
+                © 2024 PergoLuxx Construction LLC. Patent Pending.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Intersection Observer for scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.problem-card, .device-card, .timeline-item').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = 'all 0.6s ease';
+            observer.observe(el);
+        });
+
+        // Smooth scroll for navigation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
