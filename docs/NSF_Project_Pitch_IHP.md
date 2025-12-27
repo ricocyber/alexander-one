@@ -1,21 +1,23 @@
 # NSF SBIR PROJECT PITCH
-## I.H.P. - Intelligent Home Protection
-### Cielo Azul LLC
+## Alexander One - Intelligent Home Protection
+### PERGOLUXX CONSTRUCTION LLC
 ### Submit at: seedfund.nsf.gov
 
 ---
 
 # SECTION 1: COMPANY INFORMATION
 
-**Company Name:** Cielo Azul LLC
+**Company Name:** PERGOLUXX CONSTRUCTION LLC
 
-**DBA:** I.H.P. - Intelligent Home Protection
+**DBA:** Alexander One
 
-**EIN:** [Your EIN]
+**EIN:** 33-3307582
 
-**D-U-N-S Number:** [Your D-U-N-S - REQUIRED]
+**D-U-N-S Number:** 136342147
 
-**SAM.gov UEI:** [Your UEI - REQUIRED]
+**SAM.gov UEI:** KBGWC67KAAL1
+
+**CAGE Code:** 17KM9
 
 **Company Address:** 4801 N Blackwelder Ave, Oklahoma City, OK 73118
 
@@ -36,7 +38,7 @@
 ## Copy/Paste This Section:
 
 ```
-I.H.P. (Intelligent Home Protection) is developing a novel multi-peril correlation platform that detects compound home failure cascades by analyzing cross-sensor data streams from water, electrical, structural, HVAC, and environmental monitoring systems.
+Alexander One is developing a novel multi-peril correlation platform that detects compound home failure cascades by analyzing cross-sensor data streams from water, electrical, structural, HVAC, and environmental monitoring systems—responding in under 3 seconds to prevent damage, not just detect it.
 
 THE PROBLEM:
 American homeowners suffer $150 billion in annual property damage. Current smart home solutions monitor single perils in isolation—Flo by Moen (water only), Ting/Whisker Labs (electrical only), Nest Protect (smoke/CO only). These devices achieve 70-99% claim reduction for their specific peril but completely miss cross-system failure cascades that cause catastrophic losses.
@@ -44,7 +46,7 @@ American homeowners suffer $150 billion in annual property damage. Current smart
 Example: An HVAC compressor drawing excess current (electrical anomaly) indicates bearing degradation, which causes refrigerant micro-leaks (environmental), leading to condensation backup (water damage), eventually causing foundation moisture infiltration (structural). No existing consumer device correlates these signals—each system appears "normal" in isolation until catastrophic failure occurs.
 
 THE TECHNICAL INNOVATION:
-I.H.P. introduces three novel technical contributions:
+Alexander One introduces three novel technical contributions:
 
 1. MULTI-PERIL CORRELATION ENGINE: A time-series analysis algorithm that identifies statistically significant correlations across heterogeneous sensor data streams. Using sliding window cross-correlation with adaptive thresholds, the engine detects failure cascade signatures that single-peril devices miss. Initial modeling indicates 85%+ detection accuracy for compound failures with <5% false positive rate.
 
@@ -77,7 +79,7 @@ These risks will be systematically addressed through Phase I research, simulatio
 ```
 COMMERCIAL POTENTIAL:
 
-I.H.P. addresses a $150 billion annual market with proven demand:
+Alexander One addresses a $150 billion annual market with proven demand:
 - Flo by Moen: 96% water claim reduction (LexisNexis 2020 study)
 - Ting: 80% electrical fire prevention (1M+ homes protected)
 - Vivint: Acquired by NRG Energy for $2.8 billion (2023)
@@ -99,9 +101,9 @@ MARKET SIZE:
 - 94 million US households with security systems
 
 BROADER IMPACTS:
-I.H.P. makes comprehensive home protection accessible to middle-income families who can least afford $14,000+ average water damage claims. By partnering with insurance carriers, we can subsidize device costs while reducing premiums—creating a win-win that protects families and improves insurance industry sustainability.
+Alexander One makes comprehensive home protection accessible to middle-income families who can least afford $14,000+ average water damage claims. By partnering with insurance carriers, we can subsidize device costs while reducing premiums—creating a win-win that protects families and improves insurance industry sustainability.
 
-As a Hispanic-founded company in Oklahoma, I.H.P. demonstrates that deep tech innovation can emerge from underrepresented founders and non-coastal markets.
+As a Hispanic-founded company in Oklahoma, Alexander One demonstrates that deep tech innovation can emerge from underrepresented founders and non-coastal markets.
 ```
 
 **Character Count:** ~1,750 (under 2,000 limit)
@@ -114,10 +116,10 @@ As a Hispanic-founded company in Oklahoma, I.H.P. demonstrates that deep tech in
 
 ```
 COMPANY BACKGROUND:
-Cielo Azul LLC was founded in Oklahoma City to commercialize I.H.P. technology. The company leverages founder expertise in construction, real estate development, and home systems to address the property damage crisis with practical, installer-friendly solutions.
+PERGOLUXX CONSTRUCTION LLC was founded in Oklahoma City to commercialize Alexander One technology. The company leverages founder expertise in construction, real estate development, and home systems to address the property damage crisis with practical, installer-friendly solutions. The company has 2 patents filed (101 claims) protecting core multi-peril detection and Tesla Powerwall coordination technology.
 
 PRINCIPAL INVESTIGATOR:
-Eric De Loera brings hands-on experience from LUXX BUILDZ / De Loera Development, where he has built and repaired residential properties, gaining deep understanding of how home systems interact and fail. This practical knowledge—rare among smart home technology developers—informs I.H.P.'s sensor placement, failure mode detection, and installer-friendly design.
+Eric De Loera brings hands-on experience as a licensed general contractor with 10+ years rebuilding fire-damaged homes and repairing water-damaged apartments, gaining deep understanding of how home systems interact and fail. This practical knowledge—rare among smart home technology developers—informs Alexander One's sensor placement, failure mode detection, and installer-friendly design.
 
 KEY CAPABILITIES:
 - Construction/building systems expertise
@@ -191,10 +193,10 @@ Your multi-peril correlation innovation is novel regardless of which topic you s
 ---
 
 **Document:** NSF SBIR Project Pitch - Ready to Submit
-**Company:** Cielo Azul LLC
-**Product:** I.H.P. - Intelligent Home Protection
-**Date:** December 7, 2024
-**Version:** 1.0
+**Company:** PERGOLUXX CONSTRUCTION LLC
+**Product:** Alexander One - Intelligent Home Protection
+**Date:** December 26, 2024
+**Version:** 2.0
 
 ---
 

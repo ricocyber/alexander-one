@@ -1,5 +1,6 @@
 # gBETA OKLAHOMA CITY APPLICATION
-## Cielo Azul LLC / I.H.P.
+## PERGOLUXX CONSTRUCTION LLC
+### Product: Alexander One
 ### Ready-to-Submit Answers
 
 ---
@@ -46,12 +47,12 @@ luxx.okc@gmail.com
 
 **LinkedIn:**
 ```
-linkedin.com/in/ericdeloera (or create one)
+linkedin.com/in/ericdeloera
 ```
 
 **Location:**
 ```
-Oklahoma City, OK
+4801 N Blackwelder Ave, Oklahoma City, OK 73118
 ```
 
 ---
@@ -60,23 +61,23 @@ Oklahoma City, OK
 
 **Company Name:**
 ```
-Cielo Azul LLC (dba I.H.P. - Intelligent Home Protection)
+PERGOLUXX CONSTRUCTION LLC
 ```
 
 **Website:**
 ```
-ihp-home.io (Under Development)
+alexanderone.io (Under Development)
 ```
 
 **One-line description of your company:**
 
 ```
-I.H.P. is a multi-peril smart home platform that prevents property damage by correlating water, electrical, structural, HVAC, and environmental sensor data to detect failure cascades before catastrophic loss.
+Alexander One is a home disaster prevention platform that responds in under 3 seconds to shut off water and gas when it detects leaks, fires, or hazards—preventing the $50 billion in annual U.S. property damage that current products miss.
 ```
 
 **What stage is your company?**
 ```
-Pre-revenue / Prototype development
+Pre-revenue / Working prototype / 2 patents filed (101 claims)
 ```
 
 **Industry:**
@@ -91,18 +92,28 @@ Smart Home Technology / InsurTech / IoT
 **What problem are you solving? (100-200 words)**
 
 ```
-American homeowners lose $150 billion annually to property damage. Water damage alone costs $15 billion per year—that's 14,000 incidents every single day. The average claim is $14,000-$15,400, enough to devastate a family's finances.
+American homeowners lose $50 billion annually to water damage, fires, gas leaks, and foundation failures. 93% of it is preventable.
 
-Current smart home solutions are fragmented and incomplete:
-• Flo by Moen monitors water only
-• Ting monitors electrical only
-• Nest Protect detects smoke/CO only
+THE SCALE:
+• $13 billion in water damage claims per year
+• $25 billion in fire damage claims per year
+• $2.4 billion in gas leak incidents per year
+• Every 23 seconds, a fire department responds to a home fire
 
-These single-peril devices miss dangerous cross-system failures. Example: An aging HVAC compressor draws excess current (electrical), indicating bearing failure. This leads to refrigerant leak (environmental), causing condensation backup (water), eventually damaging the foundation (structural). Current devices detect NONE of this cascade until it's too late.
+CURRENT SOLUTIONS ARE TOO SLOW:
+Existing smart home devices respond in 30-60 seconds. By then, the damage is done:
+• Flo by Moen: Water only, 30+ second response
+• Nest Protect: Smoke/CO only, detection after event starts
+• Ring: Security only, no loss prevention
 
-Insurance carriers are desperate for solutions—they've had consecutive years of underwriting losses and passed $21 billion in premium increases to consumers since 2021. They're actively partnering with smart home companies but no existing solution addresses multiple perils in a correlated way.
+These single-peril solutions detect problems AFTER they happen. They notify you faster that you're losing money—they don't prevent the loss.
 
-The problem is clear: incomplete monitoring leads to preventable disasters.
+THE INSURANCE INDUSTRY IS DESPERATE:
+• Carriers have consecutive years of underwriting losses
+• $21 billion in premium increases passed to consumers
+• Proven results: Flo (96% claim reduction), but only for water
+
+No existing solution responds fast enough to prevent damage. That's the problem.
 ```
 
 ---
@@ -112,25 +123,33 @@ The problem is clear: incomplete monitoring leads to preventable disasters.
 **What is your solution? (100-200 words)**
 
 ```
-I.H.P. (Intelligent Home Protection) is the first platform to correlate multiple home perils simultaneously.
+Alexander One is a hardware + software platform that detects home hazards and responds in under 3 seconds—fast enough to actually prevent damage.
 
-HARDWARE: Five sensor modules monitoring different risk categories:
-• Water: Pressure, flow, moisture detection
-• Electrical: Arc faults, power quality, voltage anomalies
-• Structural: Vibration, tilt, settlement
-• HVAC: Compressor health, efficiency degradation
-• Environmental: Smoke, CO, temperature, humidity
+WHAT WE DO:
+| Hazard | Response |
+|--------|----------|
+| Water leak detected | Valve closes in 800ms |
+| Gas leak detected | Supply cut, fire dept alerted |
+| Stove unattended | Graduated warnings → auto shutoff |
+| Foundation shift | 0.001° tilt detection |
+| HVAC degradation | Predicts failure before breakdown |
 
-SOFTWARE: Cloud-based correlation engine that analyzes multi-sensor data streams to identify compound failure patterns. When the system detects that an electrical anomaly + HVAC strain + humidity change are happening together, it alerts the homeowner AND provides specific guidance—not just "something's wrong."
+HARDWARE (Working Prototype):
+• ESP32-S3 microcontroller
+• MLX90614 thermal sensor (fire detection)
+• MQ-6 gas detection
+• MQ-2 smoke detection
+• PIR motion sensing
+• MQTT cloud connectivity
+• 508 lines of firmware, compiled and working
 
-INTEGRATION: Built on Matter 1.4 protocol with Thread mesh networking. Works with Apple HomeKit, Google Home, Amazon Alexa, Samsung SmartThings, and Tesla Powerwall out of the box.
+INTELLECTUAL PROPERTY:
+• US Provisional 63/934,524 — Smart Home + Tesla Powerwall Coordination (Filed Dec 9, 2025, 20 claims)
+• US Provisional 63/948,182 — AI-Powered Hazard Detection (Filed Dec 24, 2025, 81 claims)
+• Total: 101 patent claims
 
 BUSINESS MODEL:
-• Hardware sales ($500-800 per home)
-• Monthly monitoring subscription ($15-25/month)
-• Insurance data licensing ($3-5/month per home from carrier partners)
-
-Competitor single-peril devices achieve 70-99% claim reduction. By correlating all five perils, I.H.P. can exceed these results while catching failures that single-peril devices miss entirely.
+License to appliance manufacturers. Samsung, LG, Whirlpool build our technology into appliances. We collect $2-5 royalty per unit on millions of units.
 ```
 
 ---
@@ -140,59 +159,75 @@ Competitor single-peril devices achieve 70-99% claim reduction. By correlating a
 **Who are your customers?**
 
 ```
-PRIMARY: Insurance Carriers
-Major carriers actively investing in smart home loss prevention:
+PRIMARY: Appliance Manufacturers (B2B Licensing)
+
+Target licensees for Alexander One technology:
+• Samsung: 10M+ ranges/year, smart home ecosystem
+• LG: 8M+ appliances/year, ThinQ platform
+• Whirlpool: 15M+ appliances/year, largest US manufacturer
+• Generac: 3M+ generators, Tesla Powerwall competitor
+
+These manufacturers need differentiated safety features. They pay licensing fees ($2-5 per unit) to embed our technology.
+
+SECONDARY: Insurance Carriers (B2B Data)
 • Tier 1: Nationwide, State Farm, Liberty Mutual, USAA, Chubb
-• Tier 2: Allstate, American Family, Farmers, Amica
-These carriers pay data licensing fees while offering premium discounts to homeowners.
+• Data licensing fees for claim reduction insights
 
-SECONDARY: Homeowners (Direct-to-Consumer)
-• 94 million US households have security systems
-• 50%+ homes have at least one security camera
+TERTIARY: Direct to Consumer
+• 140 million US homes
 • Premium homeowners seeking comprehensive protection
-
-TERTIARY: Contractors
-• LUXX BUILDZ Tech platform for job site monitoring
-• Multi-site camera and sensor management
-• Integration with Procore, Buildertrend
+• Insurance premium discounts drive adoption
 ```
 
 **What traction do you have?**
 
 ```
-COMPLETED:
-• Comprehensive market research (insurance data, competitor analysis, Matter 1.4 specs)
-• Technical architecture designed (Nordic nRF5340 MCU, Thread networking)
-• Hardware engineering partnership in discussion
-• SBIR Phase I application drafted ($274,363 federal grant)
-• Real estate asset ($140K+) available as collateral
+INTELLECTUAL PROPERTY:
+• Patent 63/934,524 filed Dec 9, 2025 (20 claims)
+• Patent 63/948,182 filed Dec 24, 2025 (81 claims)
+• Total: 101 patent claims protecting core technology
 
-VALIDATION:
-• Competitor results prove demand: Flo (96%), Ting (80%), Phyn (99%) claim reductions
-• Nationwide has 50,000+ homes in Ting program alone
-• NRG paid $2.8B for Vivint, validating market
+HARDWARE PROTOTYPE:
+• ESP32-S3 microcontroller — Working
+• MLX90614 thermal sensor — Integrated
+• MQ-6 gas detection — Integrated
+• MQ-2 smoke detection — Integrated
+• PIR motion sensing — Integrated
+• MQTT cloud connectivity — Live
+• 508 lines of firmware — Compiled
 
-NEXT 90 DAYS:
-• Complete first working prototype
-• Deploy 5-10 home pilot in OKC
-• Submit SBIR application
-• Secure first insurance carrier LOI
+TECHNICAL VALIDATION:
+• Sub-3-second response time achieved
+• 44-74% gross margins on hardware (BOM finalized)
+• 6 months of development, 500+ hours solo research
+
+BUSINESS DEVELOPMENT:
+• Oklahoma outreach emails sent to i2E, gener8tor, OCAST, OK Catalyst, Gradient, Cortado Ventures
+• Gradient Tulsa responded (in discussion)
+• Bridge2 application in progress ($50K at completion)
+• OMFA and StitchCrew applications prepared
+
+MARKET VALIDATION:
+• Ring sold to Amazon for $1.15B
+• Nest sold to Google for $3.2B
+• Flo acquired by Moen (96% water claim reduction)
 ```
 
 **How big is your market?**
 
 ```
 TAM (Total Addressable Market):
-• Global home insurance: $576 billion by 2033
-• US smart home security: $43.9 billion by 2033
+• Smart home devices: $154 billion by 2028
+• IoT data monetization: $1 trillion by 2034
 
 SAM (Serviceable Addressable Market):
 • Smart home insurance technology: $13.47 billion by 2033 (18.25% CAGR)
-• 94 million US households with security systems
+• Appliance manufacturing licensing: 33M+ units/year (Samsung + LG + Whirlpool)
 
 SOM (Serviceable Obtainable Market - 5 year):
-• Target: 100,000 homes at $50/month average revenue
-• Year 5 revenue potential: $60 million ARR
+• Target: 10M units with Alexander One technology embedded
+• $2-5 royalty per unit = $20M-$50M annually
+• Plus insurance data licensing revenue
 ```
 
 ---
@@ -202,31 +237,34 @@ SOM (Serviceable Obtainable Market - 5 year):
 **Who are your competitors and how are you different?**
 
 ```
-COMPETITORS:
-| Company | Focus | Claim Reduction | Gap |
-|---------|-------|-----------------|-----|
-| Flo by Moen | Water only | 96% | No electrical/structural |
-| Ting | Electrical only | 80% | No water/HVAC |
-| LeakBot | Water only | 70% | No prediction |
-| Phyn | Water only | 99% | No correlation |
-| Nest Protect | Smoke/CO | N/A | Reactive only |
+COMPETITORS (Single-Peril, Slow Response):
+| Company | Peril | Response Time | Exit |
+|---------|-------|---------------|------|
+| Flo by Moen | Water only | 30-60 sec | Acquired by Moen |
+| Ting/Whisker Labs | Electrical only | Detection | $26M+ raised |
+| Phyn | Water only | 30+ sec | Belkin/Uponor |
+| Nest Protect | Smoke/CO only | Detection | Google ($3.2B) |
+| Ring | Security only | N/A | Amazon ($1.15B) |
 
-I.H.P. DIFFERENTIATION:
+ALEXANDER ONE DIFFERENTIATION:
 
-1. MULTI-PERIL CORRELATION
-Only platform monitoring 5 perils simultaneously. We detect failure cascades competitors miss entirely.
+1. SPEED: Under 3 Seconds
+Competitors respond in 30-60 seconds. We respond in under 3. That's the difference between a wet floor and $50,000 in damage.
 
-2. INSURANCE-GRADE DATA
-Built for carrier integration from day one. Competitors built consumer products first, retrofit for insurance later.
+2. MULTI-PERIL COVERAGE
+Only platform addressing water + fire + gas + foundation + stove in one system.
 
-3. MATTER 1.4 NATIVE
-Full ecosystem compatibility (Tesla, Apple, Google, Amazon) while competitors use proprietary protocols.
+3. AUTOMATIC SHUTOFF
+We don't just detect and notify—we actually shut off water and gas automatically.
 
-4. PREVENTION-FIRST
-Predictive algorithms identify problems before failure, not just detect after the fact.
+4. 101 PATENT CLAIMS
+Two US provisionals filed protecting technology that doesn't exist anywhere else.
 
-5. CONTRACTOR PLATFORM
-LUXX BUILDZ Tech extends to job sites—no competitor addresses this market.
+5. LICENSING MODEL
+We don't compete with Samsung, LG, Whirlpool—we license to them.
+
+6. FOUNDER ADVANTAGE
+10+ years as a licensed general contractor. I've rebuilt fire-damaged homes and water-damaged apartments. I know where problems start.
 ```
 
 ---
@@ -238,25 +276,31 @@ LUXX BUILDZ Tech extends to job sites—no competitor addresses this market.
 ```
 FOUNDER: Eric De Loera
 • CEO & Product Lead
-• Background: Construction and real estate development (LUXX BUILDZ / De Loera Development)
-• Hands-on experience with home systems, failure modes, and contractor workflows
+• Licensed general contractor, 10+ years experience
+• Built and repaired homes across Oklahoma
+• Rebuilt fire-damaged homes, repaired water-damaged apartments
 • First-generation Hispanic entrepreneur in Oklahoma City
 
 WHY I'M THE RIGHT FOUNDER:
-I've spent years building and repairing homes. I've seen how water leaks destroy drywall, how electrical faults cause fires, how HVAC failures cascade into bigger problems. Engineers at Ring and Nest have never crawled under a house or traced a fault through a wall.
+I spent 10 years in construction seeing how homes fail:
+• Water leaks that destroy drywall and foundations
+• Electrical faults that cause fires
+• HVAC failures that cascade into bigger problems
+• The financial devastation these cause to families
 
-I understand:
-• How building systems interact and fail together
-• What contractors actually need on job sites
-• How insurance claims devastate working families
-• The Oklahoma market and community
+Engineers at Ring, Nest, and Flo have never crawled under a house to fix a leak or traced an electrical fault through a wall. They build consumer gadgets based on theory.
 
-BUILDING THE TEAM:
-• Hardware Engineer: In discussion with Joe Hobart (EE, Kicker Audio)
-• Software Engineer: Actively recruiting
-• Insurance Advisor: Building carrier relationships
+I build solutions based on reality.
 
-gBETA mentorship will help identify and attract key team members.
+That's why I filed 2 patents with 101 claims in 2 weeks. That's why I built working firmware alone. That's why I know this technology needs to exist.
+
+SOLO FOUNDER ADVANTAGE:
+• Built working prototype alone (firmware, hardware, cloud)
+• Filed 2 patents alone (101 claims)
+• No equity diluted to technical co-founder
+• Full decision-making control
+
+gBETA mentorship will help identify and attract key team members and advisors.
 ```
 
 ---
@@ -267,16 +311,16 @@ gBETA mentorship will help identify and attract key team members.
 
 ```
 1. CUSTOMER DISCOVERY VALIDATION
-I've done market research—gBETA will push me to validate assumptions through direct customer conversations with homeowners and insurance contacts.
+I've done market research—gBETA will push me to validate assumptions through direct conversations with manufacturers and insurance contacts.
 
 2. BUSINESS MODEL REFINEMENT
-Hardware + subscription + data licensing is complex. I need help optimizing pricing, unit economics, and go-to-market sequencing.
+Licensing to Samsung, LG, Whirlpool is complex. I need help optimizing pricing, unit economics, and go-to-market sequencing.
 
 3. PITCH DEVELOPMENT
-I know my technology. I need help translating that into a compelling 2-minute pitch for investors and partners.
+I know my technology. I need help translating that into a compelling 2-minute pitch for manufacturers and investors.
 
 4. MENTOR NETWORK
-Access to entrepreneurs who've built hardware companies, navigated manufacturing, and sold to enterprise customers (insurance carriers).
+Access to entrepreneurs who've built hardware companies, navigated manufacturing, and sold to enterprise customers.
 
 5. PATHWAY TO GENER8TOR
 The $100K gener8tor investment accelerator is a logical next step. gBETA demonstrates I'm serious and coachable.
@@ -288,17 +332,28 @@ I'm building in Oklahoma, not Silicon Valley. I need deep connections to the loc
 **What's your biggest challenge right now?**
 
 ```
-CAPITAL + CREDIBILITY GAP
+CAPITAL FOR CERTIFICATION + DEMOS
 
-I have the technical vision, market understanding, and real estate collateral—but I'm a solo founder with a new LLC and no startup track record. This creates two connected challenges:
+I have:
+• 2 patents filed (101 claims)
+• Working prototype
+• 44-74% gross margins
+• Clear business model (licensing)
 
-1. FUNDING: Traditional lenders won't touch a new tech LLC. Grant programs require track record. I need non-dilutive capital to build a prototype without giving away equity too early.
+I need:
+• UL/FCC/ETL certification ($75K)
+• Professional demo units for Samsung, LG, Whirlpool meetings
+• Travel to manufacturer headquarters
 
-2. CREDIBILITY: Insurance carriers and investors see a solo founder from Oklahoma and wonder if I can execute. I need external validation—accelerator completion, advisor endorsements, pilot results.
+gBETA helps in two ways:
+1. CREDIBILITY: Manufacturers take me more seriously as a gBETA graduate with gener8tor backing
+2. CAPITAL ACCESS: Pathway to gener8tor $100K + connections to other funding sources
 
-gBETA solves #2 directly (credibility through program completion and mentor relationships) and helps #1 indirectly (connections to capital sources, pathway to gener8tor $100K investment).
-
-I'm also pursuing SBIR federal grants ($274K Phase I) and minority business programs (Comcast RISE, StitchCrew) to address the funding gap.
+I'm also pursuing:
+• i2E Bridge2 ($50K at completion)
+• OMFA investment
+• StitchCrew grant ($15K)
+• OCAST SSBCI programs
 ```
 
 ---
@@ -317,15 +372,19 @@ I'm protective of my cap table this early. gBETA gives me accelerator benefits w
 The $100K gener8tor investment accelerator is one of the best opportunities in Oklahoma. gBETA is the proving ground—if I perform well, I have a clear path to that investment.
 
 3. LOCAL FOCUS
-I'm building in Oklahoma, for Oklahoma first. gBETA OKC understands this market, has local mentors, and connects to the OKC innovation ecosystem. I don't need Silicon Valley advice—I need OKC advice.
+I'm building in Oklahoma, for Oklahoma first. gBETA OKC understands this market, has local mentors, and connects to the OKC innovation ecosystem.
 
-I'm fully committed to the 7-week program. I'll show up prepared, coachable, and ready to work.
+Ring started in a garage. Sold to Amazon for $1.15B.
+Nest started with one thermostat. Sold to Google for $3.2B.
+Flo started with a water valve. Moen acquired them.
+
+I'm building the next one. In Oklahoma. gBETA is where it starts.
 ```
 
 **Are you able to commit to the full 7-week program?**
 
 ```
-Yes. I'm 100% committed to attending all sessions, completing assignments, and fully engaging with mentors and cohort members. Building I.H.P. is my primary focus—I'll structure my schedule around gBETA requirements.
+Yes. I'm 100% committed to attending all sessions, completing assignments, and fully engaging with mentors and cohort members. Building Alexander One is my primary focus—I'll structure my schedule around gBETA requirements.
 ```
 
 ---
@@ -338,9 +397,14 @@ Yes. I'm 100% committed to attending all sessions, completing assignments, and f
 - [ ] Prepare 60-second video pitch (if required)
 - [ ] Review all answers for clarity and typos
 
+## Required Documents:
+- [ ] PergoLuxx Construction LLC Articles of Organization
+- [ ] Patent filing receipts (63/934,524 and 63/948,182)
+- [ ] Prototype photos/video
+
 ## Apply Here:
 **Website:** gbeta.org/oklahoma-city
-**Email:** [Check website for current contact]
+**Email:** oklahomacity@gener8tor.com
 
 ## Tips:
 - gBETA values coachability—show you're open to feedback
@@ -350,5 +414,8 @@ Yes. I'm 100% committed to attending all sessions, completing assignments, and f
 ---
 
 **Document:** gBETA OKC Application
-**Prepared for:** Cielo Azul LLC
-**Date:** December 6, 2024
+**Prepared for:** PERGOLUXX CONSTRUCTION LLC
+**Product:** Alexander One
+**Founder:** Eric De Loera
+**Address:** 4801 N Blackwelder Ave, Oklahoma City, OK 73118
+**Date:** December 26, 2024
